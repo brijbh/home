@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #004973;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #FFFBDE;
+    border: 2px solid #97AAAF;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #FF790B;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+p {
+    color: #004973;
+}
+
+.button {
+    display: inline-block;
+    background-color: #004973;
+    color: #FF790B;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 700;
+}
+
+.button:hover {
+    background-color: #FF790B;
+    color: #004973;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
