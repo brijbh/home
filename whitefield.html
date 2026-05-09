@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whitefield | Git Home</title>
+  <meta name="description" content="Whitefield is a visual utility for identifying colors from photos and turning them into usable palettes." />
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --surface: #fff9f2;
+      --text: #1f2430;
+      --text-soft: #5f6773;
+      --border: rgba(31, 36, 48, 0.10);
+      --accent: #4f7c82;
+      --accent-warm: #c96a3d;
+      --shadow: 0 10px 30px rgba(60, 40, 20, 0.08);
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f6f1e8 0%, #efe7db 100%);
+      line-height: 1.65;
+    }
+
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; padding: 32px 0 56px; }
+    .topbar { margin-bottom: 24px; }
+    .back-link { color: var(--accent); text-decoration: none; font-weight: 700; }
+
+    .hero {
+      background: rgba(255, 249, 242, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.05;
+      margin: 0 0 12px;
+    }
+
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h2 { font-size: 1.8rem; margin-top: 28px; }
+
+    .subtitle {
+      margin: 0;
+      color: var(--accent-warm);
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .card {
+      background: rgba(255, 249, 242, 0.78);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      margin-top: 18px;
+    }
+
+    p { margin: 0 0 14px; color: var(--text-soft); }
+    ul { margin: 0; padding-left: 20px; color: var(--text-soft); }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.45);
+      color: var(--text);
+    }
+
+    .button.primary {
+      background: var(--accent-warm);
+      color: white;
+      border-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="back-link" href="index.html">← Back to Git Home</a>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Color Identification from Photo</p>
+      <h1>Whitefield</h1>
+      <p class="subtitle">A visual utility for extracting useful colors from real-world images.</p>
+    </section>
+
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        Whitefield is built around a simple but practical design problem: useful colors are everywhere, but translating
+        them from a photo into a usable palette is often more awkward than it should be.
+      </p>
+      <p>
+        The project explores a cleaner, more approachable way to identify colors, understand their relationships, and
+        turn them into something a designer or builder can actually use.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What the product is trying to solve</h2>
+      <p>
+        Many color tools are either too technical for casual use or too shallow for meaningful work. Whitefield aims
+        to sit in the middle: simple enough to feel immediate, but structured enough to be useful.
+      </p>
+      <p>
+        It treats a photo not just as an image, but as a source of visual information that can be extracted, organized,
+        and turned into design input.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Core ideas</h2>
+      <ul>
+        <li>Color extraction that feels approachable and readable.</li>
+        <li>Visual analysis presented in a calm, uncluttered way.</li>
+        <li>Useful palette output rather than raw data alone.</li>
+        <li>A utility experience shaped by design thinking, not just function.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>My role</h2>
+      <p>
+        Whitefield reflects my interest in turning visually rich ideas into practical tools. I shaped the product
+        framing, naming, interaction approach, and interface direction, and used AI-assisted development to help bring
+        the product into working form.
+      </p>
+    </section>
+
+    <div class="actions">
+      <a class="button primary" href="https://whitefield.vercel.app" target="_blank" rel="noopener noreferrer">Visit Site</a>
+      <a class="button" href="https://github.com/brijbh/whitefield" target="_blank" rel="noopener noreferrer">View Repo</a>
+    </div>
+  </div>
+</body>
+</html>
