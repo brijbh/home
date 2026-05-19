@@ -86,7 +86,7 @@ const siteConfig = {
       detailUrl: "silkboard.html",
       liveUrl: "https://silkboard.vercel.app",
       repoUrl: "https://github.com/brijbh/silkboard",
-      iconPath: "assets/images/silkboard-logo.png",
+      iconPath: "assets/images/silkboard-logo.svg",
       imagePath: "assets/images/silkboard.png",
       imageMode: "screenshot",
       imageFit: "contain",
