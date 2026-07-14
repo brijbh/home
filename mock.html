@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git Home Card Template Reference</title>
+  <style>
+    :root {
+      --page-bg: #f6f1e8;
+      --page-bg-wash: #efe7db;
+      --surface: #fff9f2;
+      --surface-alt: #f3ece2;
+
+      --text-primary: #1f2430;
+      --text-secondary: #5f6773;
+      --text-muted: #7b8391;
+
+      --border: rgba(31, 36, 48, 0.10);
+      --border-strong: rgba(31, 36, 48, 0.16);
+
+      --accent-primary: #c96a3d;
+      --accent-primary-hover: #b85c31;
+      --accent-soft: #f3dfd3;
+
+      --accent-cool: #4f7c82;
+      --accent-cool-soft: #dce8e7;
+
+      --moss: #7c8a63;
+      --clay: #8b5e3c;
+
+      --shadow-card: 0 10px 30px rgba(60, 40, 20, 0.08);
+      --shadow-elevated: 0 18px 45px rgba(60, 40, 20, 0.12);
+
+      --radius-card: 24px;
+      --radius-inner: 16px;
+      --radius-pill: 999px;
+
+      --max-width: 1320px;
+
+      /* Card sizing guidance */
+      --card-min-height: 340px;
+      --preview-min-height: 260px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text-primary);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255, 249, 242, 0.95), transparent 34%),
+        linear-gradient(180deg, var(--page-bg) 0%, var(--page-bg-wash) 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-shell {
+      width: min(calc(100% - 48px), var(--max-width));
+      margin: 0 auto;
+      padding: 48px 0 60px;
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--accent-primary);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      line-height: 0.95;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    /*
+      CARD TEMPLATE RULES
+      - 2-column grid overall
+      - each card stays in normal grid width
+      - inside card: 54% preview / 46% content
+      - min height around 340px
+    */
+    .project-card {
+      --project-accent: var(--accent-cool);
+      display: grid;
+      grid-template-columns: 54% 46%;
+      gap: 20px;
+      min-height: var(--card-min-height);
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      background: rgba(255, 249, 242, 0.84);
+      box-shadow: var(--shadow-card);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201, 106, 61, 0.24);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .project-card--hoodi { --project-accent: #4f7c82; }
+    .project-card--silkboard { --project-accent: #7c8a63; }
+    .project-card--ulsoor { --project-accent: #c96a3d; }
+    .project-card--domlur { --project-accent: #8b5e3c; }
+    .project-card--whitefield { --project-accent: #4f7c82; }
+
+    /*
+      PREVIEW PANE
+      - fixed, controlled area
+      - never lets image define card width
+      - screenshot mode uses contain
+      - artwork mode can be more illustrative
+    */
+    .project-preview {
+      min-height: var(--preview-min-height);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-inner);
+      background: var(--surface-alt);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-preview__frame {
+      width: 100%;
+      height: 100%;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /*
+      SCREENSHOT MODE
+      - use contain
+      - show whole UI
+      - do not crop meaningful interface
+    */
+    .project-preview--screenshot .project-preview__frame {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .project-preview--screenshot img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center top;
+      border-radius: 10px;
+      background: #e9e2d8;
+    }
+
+    /*
+      ART / PLACEHOLDER MODE
+    */
+    .project-preview--art {
+      padding: 14px;
+    }
+
+    .project-content {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2px 2px 2px 0;
+    }
+
+    .project-top {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .project-brand-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .project-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .project-logo {
+      width: 56px;
+      height: 56px;
+      flex: 0 0 auto;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+    }
+
+    .project-status {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--project-accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .project-type {
+      margin: 0;
+      color: var(--project-accent);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.25;
+    }
+
+    .project-name {
+      margin: 2px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 2.3vw, 2.75rem);
+      line-height: 0.98;
+    }
+
+    .project-tagline {
+      margin: 0;
+      color: var(--accent-primary);
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .project-description {
+      margin: 0;
+      color: var(--text-primary);
+      font-size: 0.98rem;
+      line-height: 1.55;
+      max-width: 32ch;
+    }
+
+    .project-links-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 20px;
+    }
+
+    .project-inline-link {
+      color: var(--accent-cool);
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag-list span {
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.42);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .project-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button--secondary {
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid var(--border-strong);
+      color: var(--text-primary);
+    }
+
+    .button--primary {
+      background: linear-gradient(180deg, var(--accent-primary), var(--accent-primary-hover));
+      color: #fff;
+      box-shadow: 0 12px 26px rgba(201, 106, 61, 0.18);
+    }
+
+    /* Placeholder previews */
+
+    .preview-calc {
+      width: 100%;
+      height: 100%;
+      padding: 18px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 16px;
+    }
+
+    .preview-calc__lines span {
+      display: block;
+      height: 16px;
+      margin-bottom: 10px;
+      border-radius: 999px;
+      background: rgba(124, 138, 99, 0.18);
+    }
+
+    .preview-calc__lines span:nth-child(2) { width: 76%; }
+    .preview-calc__lines span:nth-child(3) { width: 58%; }
+
+    .preview-calc__total {
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(124, 138, 99, 0.62), rgba(201, 106, 61, 0.16));
+    }
+
+    .preview-calc__bars {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.55fr;
+      gap: 10px;
+      align-items: end;
+      height: 56px;
+    }
+
+    .preview-calc__bars span {
+      border-radius: 8px 8px 0 0;
+      background: var(--project-accent);
+    }
+
+    .preview-calc__bars span:nth-child(2) { height: 72%; opacity: 0.66; }
+    .preview-calc__bars span:nth-child(3) { height: 48%; opacity: 0.44; }
+
+    .preview-kolam {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background:
+        radial-gradient(circle, rgba(79, 124, 130, 0.24) 1px, transparent 1px),
+        var(--surface-alt);
+      background-size: 22px 22px;
+    }
+
+    .preview-kolam .line {
+      position: absolute;
+      inset: 50%;
+      border: 3px solid var(--accent-cool);
+      transform-origin: center;
+    }
+
+    .preview-kolam .l1 {
+      width: 160px;
+      height: 160px;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .preview-kolam .l2 {
+      width: 110px;
+      height: 110px;
+      transform: translate(-50%, -50%);
+    }
+
+    .preview-kolam .l3 {
+      width: 64px;
+      height: 64px;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .preview-kolam .l4 {
+      width: 205px;
+      height: 2px;
+      border: 0;
+      background: var(--accent-cool);
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .preview-pattern {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(79, 124, 130, 0.16), transparent 34%),
+        linear-gradient(315deg, rgba(201, 106, 61, 0.18), transparent 38%),
+        var(--surface-alt);
+    }
+
+    .preview-pattern .word {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      color: transparent;
+      background: linear-gradient(90deg, var(--accent-cool), var(--accent-primary), var(--clay));
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-size: clamp(3rem, 4vw, 4.5rem);
+      line-height: 0.9;
+    }
+
+    .preview-color {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 12px;
+      padding: 12px;
+    }
+
+    .preview-color__photo {
+      border-radius: 12px;
+      background:
+        linear-gradient(155deg, rgba(31, 36, 48, 0.22), transparent 48%),
+        linear-gradient(25deg, #5e7d86 0 30%, #c9a278 30% 58%, #e9e6df 58% 100%);
+    }
+
+    .preview-color__swatches {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      height: 42px;
+    }
+
+    .preview-color__swatches span {
+      border-radius: 8px;
+    }
+
+    .preview-color__swatches span:nth-child(1) { background: #2e4f5c; }
+    .preview-color__swatches span:nth-child(2) { background: #5e7d86; }
+    .preview-color__swatches span:nth-child(3) { background: #c9a278; }
+    .preview-color__swatches span:nth-child(4) { background: #e9e6df; }
+
+    @media (max-width: 1180px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        grid-template-columns: 52% 48%;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+
+      .project-preview {
+        min-height: 240px;
+      }
+
+      .project-content {
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-shell {
+        width: min(calc(100% - 24px), var(--max-width));
+      }
+
+      .project-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .project-name {
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="section-heading">
+      <p class="section-kicker">Selected projects</p>
+      <h1 class="section-title">Projects</h1>
+    </header>
+
+    <section class="projects-grid">
+
+      <!-- HOODI : screenshot mode -->
+      <article class="project-card project-card--hoodi">
+        <div class="project-preview project-preview--screenshot">
+          <div class="project-preview__frame">
+            <img src="assets/images/hoodi.jpg" alt="Hoodi screenshot preview" />
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-top">
+            <div class="project-brand-row">
+              <div class="project-brand">
+                <div class="project-logo">
+                  <img src="assets/images/hoodi-logo-dark.png" alt="Hoodi logo" />
+                </div>
+              </div>
+              <span class="project-status">Prototype</span>
+            </div>
+
+            <div>
+              <p class="project-type">Prompt Ops / Prompt Workspace</p>
+              <h2 class="project-name">Hoodi</h2>
+              <p class="project-tagline">Prompt Ops workspace</p>
+            </div>
+
+            <p class="project-description">
+              Test prompts, manage versions, compare results, and optimize with clarity.
+            </p>
+
+            <div class="tag-list">
+              <span>Prompt Ops</span>
+              <span>Workspace</span>
+              <span>Clarity</span>
+            </div>
+
+            <div class="project-links-row">
+              <a class="project-inline-link" href="#">Repo ↗</a>
+            </div>
+          </div>
+
+          <div class="project-actions">
+            <a class="button button--secondary" href="#">Know More</a>
+            <a class="button button--primary" href="#">Visit Site</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SILKBOARD : placeholder mode -->
+      <article class="project-card project-card--silkboard">
+        <div class="project-preview project-preview--art">
+          <div class="preview-calc">
+            <div class="preview-calc__lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="preview-calc__total"></div>
+            <div class="preview-calc__bars">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-top">
+            <div class="project-brand-row">
+              <div class="project-brand"></div>
+              <span class="project-status">Live</span>
+            </div>
+
+            <div>
+              <p class="project-type">ESOP Earnings and Tax Calculator</p>
+              <h2 class="project-name">Silkboard</h2>
+              <p class="project-tagline">ESOP earnings and tax calculator</p>
+            </div>
+
+            <p class="project-description">
+              A practical calculator for thoughtful equity, earnings, and tax planning.
+            </p>
+
+            <div class="tag-list">
+              <span>Calculator</span>
+              <span>ESOP</span>
+              <span>Planning</span>
+            </div>
+          </div>
+
+          <div class="project-actions">
+            <a class="button button--secondary" href="#">Know More</a>
+            <a class="button button--primary" href="#">Visit Site</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ULSOOR -->
+      <article class="project-card project-card--ulsoor">
+        <div class="project-preview project-preview--art">
+          <div class="preview-kolam">
+            <div class="line l1"></div>
+            <div class="line l2"></div>
+            <div class="line l3"></div>
+            <div class="line l4"></div>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-top">
+            <div class="project-brand-row">
+              <div class="project-brand"></div>
+              <span class="project-status">Concept</span>
+            </div>
+
+            <div>
+              <p class="project-type">Kolam Designs</p>
+              <h2 class="project-name">Ulsoor</h2>
+              <p class="project-tagline">Kolam design explorer</p>
+            </div>
+
+            <p class="project-description">
+              Explore generative kolam patterns inspired by traditional geometry and symmetry.
+            </p>
+
+            <div class="tag-list">
+              <span>Kolam</span>
+              <span>Geometry</span>
+              <span>Canvas</span>
+            </div>
+          </div>
+
+          <div class="project-actions">
+            <a class="button button--secondary" href="#">Know More</a>
+            <a class="button button--primary" href="#">Visit Site</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DOMLUR -->
+      <article class="project-card project-card--domlur">
+        <div class="project-preview project-preview--art">
+          <div class="preview-pattern">
+            <div class="word">PLAY</div>
+            <div class="word">BUILD</div>
+            <div class="word">REPEAT</div>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-top">
+            <div class="project-brand-row">
+              <div class="project-brand"></div>
+              <span class="project-status">In Progress</span>
+            </div>
+
+            <div>
+              <p class="project-type">Pattern Generation</p>
+              <h2 class="project-name">Domlur</h2>
+              <p class="project-tagline">Pattern generator</p>
+            </div>
+
+            <p class="project-description">
+              Create playful generative pattern compositions with simple visual controls.
+            </p>
+
+            <div class="tag-list">
+              <span>Patterns</span>
+              <span>Generative</span>
+              <span>Visual</span>
+            </div>
+          </div>
+
+          <div class="project-actions">
+            <a class="button button--secondary" href="#">Know More</a>
+            <a class="button button--primary" href="#">Visit Site</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- WHITEFIELD -->
+      <article class="project-card project-card--whitefield">
+        <div class="project-preview project-preview--art">
+          <div class="preview-color">
+            <div class="preview-color__photo"></div>
+            <div class="preview-color__swatches">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-top">
+            <div class="project-brand-row">
+              <div class="project-brand"></div>
+              <span class="project-status">Prototype</span>
+            </div>
+
+            <div>
+              <p class="project-type">Color Identification from Photo</p>
+              <h2 class="project-name">Whitefield</h2>
+              <p class="project-tagline">Color ID from photo</p>
+            </div>
+
+            <p class="project-description">
+              Extract and identify useful colors from any photo with clear visual analysis.
+            </p>
+
+            <div class="tag-list">
+              <span>Color</span>
+              <span>Photo</span>
+              <span>Utility</span>
+            </div>
+          </div>
+
+          <div class="project-actions">
+            <a class="button button--secondary" href="#">Know More</a>
+            <a class="button button--primary" href="#">Visit Site</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </div>
+</body>
+</html>

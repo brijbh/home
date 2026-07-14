@@ -147,6 +147,21 @@ const siteConfig = {
       imagePath: "assets/images/whitefield.png",
       previewAspect: "5 / 4",
       previewStyle: "color"
+    },
+    {
+      id: "jakkur",
+      name: "Jakkur",
+      type: "Real-time ambient dashboard",
+      tagline: "Live radar, ISS, markets and mission control",
+      description: "An always-on ambient dashboard with live flight radar, airline logos, ISS tracking, world clocks, stock markets, and rotating Bhagavad Gita shlokas — built for a 1080p display.",
+      status: "Prototype",
+      tags: ["Flight Radar", "Dashboard", "Real-time"],
+      accent: "#3D7A8A",
+      detailUrl: "jakkur.html",
+      liveUrl: "https://jakkur.vercel.app",
+      repoUrl: "https://github.com/brijbh/jakkur",
+      previewAspect: "5 / 4",
+      previewStyle: "radar"
     }
   ]
 };
