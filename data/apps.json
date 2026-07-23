@@ -101,7 +101,7 @@
     "coverImage": "assets/images/domlur.png",
     "accentColor": "#669BBC",
     "previewColor": "#003049",
-    "websiteUrl": "#",
+    "websiteUrl": "domlur.vercel.app",
     "githubUrl": "",
     "whyItExists": [
       "Generative tools often expose every parameter and make exploration feel technical. Domlur asks how a compact set of meaningful choices can keep experimentation immediate."
