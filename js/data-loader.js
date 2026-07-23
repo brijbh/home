@@ -4,7 +4,7 @@
   window.GitHomeData = {
     async load(name) {
       if (cache[name]) return cache[name];
-      const response = await fetch(`data/${name}.json`);
+      const response = await fetch(`data/${name}.json`, { cache: "no-cache" });
       if (!response.ok) throw new Error(`Unable to load ${name}.json`);
       cache[name] = await response.json();
       return cache[name];
@@ -18,7 +18,7 @@
           return cache[base + name];
         }
       }
-      const response = await fetch(`${base}data/${name}.json`);
+      const response = await fetch(`${base}data/${name}.json`, { cache: "no-cache" });
       if (!response.ok) throw new Error(`Unable to load ${name}.json`);
       cache[base + name] = await response.json();
       return cache[base + name];
