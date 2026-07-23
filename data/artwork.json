@@ -1,0 +1,103 @@
+[
+  {
+    "id": "temple-study",
+    "visible": true,
+    "title": "Temple Study",
+    "year": 2026,
+    "medium": "Ink on paper",
+    "featured": true,
+    "order": 1,
+    "thumbnail": "assets/illustrations/art-temple.svg",
+    "image": "assets/illustrations/art-temple.svg",
+    "alt": "Loose ink sketch of a small temple facade",
+    "description": "A quick architectural study in ink.",
+    "tags": [
+      "architecture",
+      "ink"
+    ]
+  },
+  {
+    "id": "indigo-vermilion",
+    "visible": true,
+    "title": "Indigo Vermilion",
+    "year": 2026,
+    "medium": "Digital collage",
+    "featured": true,
+    "order": 2,
+    "thumbnail": "assets/illustrations/art-abstract.svg",
+    "image": "assets/illustrations/art-abstract.svg",
+    "alt": "Indigo and vermilion abstract brush composition",
+    "description": "A paper-textured study of color, weight and interruption.",
+    "tags": [
+      "abstract",
+      "color"
+    ]
+  },
+  {
+    "id": "kingfisher-study",
+    "visible": true,
+    "title": "Kingfisher Study",
+    "year": 2024,
+    "medium": "Ink on paper",
+    "featured": true,
+    "order": 3,
+    "thumbnail": "assets/illustrations/art-bird.svg",
+    "image": "assets/illustrations/art-bird.svg",
+    "alt": "Ink drawing of a kingfisher on a branch",
+    "description": "Quick sketch from my morning walks. The pause before the dive.",
+    "tags": [
+      "bird",
+      "ink"
+    ]
+  },
+  {
+    "id": "monsoon-ink",
+    "visible": true,
+    "title": "Monsoon Ink",
+    "year": 2026,
+    "medium": "Ink wash",
+    "featured": true,
+    "order": 4,
+    "thumbnail": "assets/illustrations/art-ink.svg",
+    "image": "assets/illustrations/art-ink.svg",
+    "alt": "Monochrome ink wash abstract composition",
+    "description": "A study in bleed, pause and negative space.",
+    "tags": [
+      "ink",
+      "abstract"
+    ]
+  },
+  {
+    "id": "market-noise",
+    "visible": true,
+    "title": "Market Noise",
+    "year": 2026,
+    "medium": "Digital mixed media",
+    "featured": true,
+    "order": 5,
+    "thumbnail": "assets/illustrations/art-color.svg",
+    "image": "assets/illustrations/art-color.svg",
+    "alt": "Bold colorful abstract with black lines and saturated blocks",
+    "description": "Saturated fragments held together by restless line work.",
+    "tags": [
+      "color",
+      "mixed media"
+    ]
+  },
+  {
+    "id": "quiet-vase",
+    "visible": true,
+    "title": "Quiet Vase",
+    "year": 2026,
+    "medium": "Digital ink",
+    "featured": true,
+    "order": 6,
+    "thumbnail": "assets/illustrations/vase.svg",
+    "image": "assets/illustrations/vase.svg",
+    "alt": "Small vase with spare red botanical stems",
+    "description": "A restrained botanical study.",
+    "tags": [
+      "botanical"
+    ]
+  }
+]

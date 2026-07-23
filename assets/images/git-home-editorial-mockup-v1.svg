@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1760" viewBox="0 0 1440 1760" role="img" aria-labelledby="title desc">
+  <title id="title">Git Home editorial portfolio mockup v1</title>
+  <desc id="desc">A warm editorial single-page portfolio concept for Brij, focused on product thinking, design craft, technical understanding, and selected case-study style work.</desc>
+  <defs>
+    <style>
+      :root {
+        --page-bg: #F6F1E8;
+        --wash: #EFE7DB;
+        --surface: #FFF9F2;
+        --surface-alt: #F3ECE2;
+        --text: #1F2430;
+        --secondary: #5F6773;
+        --muted: #7B8391;
+        --border: rgba(31,36,48,.12);
+        --border-strong: rgba(31,36,48,.18);
+        --accent: #C96A3D;
+        --accent-deep: #B85C31;
+        --cool: #4F7C82;
+        --cool-soft: #DCE8E7;
+        --moss: #7C8A63;
+        --clay: #8B5E3C;
+      }
+      .bg { fill: var(--page-bg); }
+      .wash { fill: var(--wash); }
+      .surface { fill: var(--surface); stroke: var(--border); }
+      .soft { fill: var(--surface-alt); stroke: var(--border); }
+      .line { stroke: var(--border); stroke-width: 1; }
+      .line-strong { stroke: var(--border-strong); stroke-width: 1; }
+      .serif { font-family: Georgia, 'Times New Roman', serif; fill: var(--text); }
+      .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: var(--text); }
+      .kicker { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; }
+      .body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--secondary); font-size: 22px; line-height: 1.5; }
+      .small { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--secondary); font-size: 15px; }
+      .muted { fill: var(--muted); }
+      .accent { fill: var(--accent); }
+      .cool { fill: var(--cool); }
+      .moss { fill: var(--moss); }
+      .clay { fill: var(--clay); }
+      .button-primary { fill: var(--accent); }
+      .button-secondary { fill: rgba(255,249,242,.72); stroke: var(--border-strong); }
+      .shadow { filter: drop-shadow(0 10px 24px rgba(60,40,20,.08)); }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1440" height="1760"/>
+  <path class="wash" opacity=".62" d="M0 1180 C300 1090 520 1160 760 1100 C1030 1032 1210 1040 1440 930 L1440 1760 L0 1760 Z"/>
+
+  <!-- Page shell: x=82 width=1276 -->
+
+  <!-- Minimal brand row -->
+  <g id="brand-row" transform="translate(82 38)">
+    <g id="git-home-mark" transform="translate(0 3)">
+      <path d="M22 0 L44 14 L44 55 L0 55 L0 14 Z" fill="none" stroke="#C96A3D" stroke-width="3" stroke-linejoin="round"/>
+      <text x="22" y="38" text-anchor="middle" class="serif accent" font-size="27" font-weight="700">G</text>
+      <rect x="31" y="38" width="9" height="17" fill="#F6F1E8" stroke="#C96A3D" stroke-width="2"/>
+    </g>
+    <text x="68" y="19" class="kicker">Portfolio of Brij</text>
+    <text x="68" y="58" class="serif" font-size="34" font-weight="700">Git Home</text>
+    <rect x="0" y="86" width="1276" height="1" class="line"/>
+  </g>
+
+  <!-- Hero -->
+  <g id="hero" transform="translate(82 184)">
+    <rect x="0" y="-22" width="118" height="34" rx="17" fill="#DCE8E7" stroke="rgba(79,124,130,.24)"/>
+    <text x="18" y="0" class="sans cool" font-size="15" font-weight="700">Point of view</text>
+
+    <text class="serif" font-size="78" font-weight="700" letter-spacing="0" line-height="1.02">
+      <tspan x="0" y="98">Built from curiosity, shaped by</tspan>
+      <tspan x="0" y="181">product thinking, and refined</tspan>
+      <tspan x="0" y="264">through design.</tspan>
+    </text>
+
+    <text class="body">
+      <tspan x="0" y="334">I explore ideas by turning them into usable tools, visual systems, and working</tspan>
+      <tspan x="0" y="369">prototypes, combining UX, design craft, technical understanding, and</tspan>
+      <tspan x="0" y="404">AI-assisted development.</tspan>
+    </text>
+
+    <g id="hero-actions" transform="translate(0 454)">
+      <rect class="button-primary shadow" x="0" y="0" width="158" height="48" rx="8"/>
+      <text x="79" y="31" class="sans" fill="#fff" font-size="16" font-weight="800" text-anchor="middle">Read the Work</text>
+      <rect class="button-secondary" x="174" y="0" width="138" height="48" rx="8"/>
+      <text x="243" y="31" class="sans" font-size="16" font-weight="800" text-anchor="middle">About Brij</text>
+    </g>
+  </g>
+
+  <!-- What I bring / process strip -->
+  <g id="capability-strip" transform="translate(82 742)">
+    <text x="0" y="0" class="kicker">What I bring</text>
+    <text x="0" y="44" class="serif" font-size="44" font-weight="700">A product designer's eye with a builder's understanding.</text>
+
+    <g transform="translate(0 88)">
+      <rect class="surface shadow" x="0" y="0" width="1276" height="170" rx="9"/>
+      <g id="process-concept" transform="translate(36 28)">
+        <circle cx="36" cy="36" r="32" fill="#F3DFD3" stroke="rgba(201,106,61,.18)"/>
+        <circle cx="36" cy="36" r="5" fill="none" stroke="#C96A3D" stroke-width="1.3" stroke-dasharray="2 2"/>
+        <text x="92" y="24" class="serif" font-size="25" font-weight="700">Concept</text>
+        <text class="small" font-size="17">
+          <tspan x="92" y="58">Clear product framing, practical problem</tspan>
+          <tspan x="92" y="84">definition, and thoughtful idea shaping</tspan>
+          <tspan x="92" y="110">from the start.</tspan>
+        </text>
+      </g>
+      <line x1="424" y1="20" x2="424" y2="150" class="line-strong"/>
+      <g id="process-ux-design" transform="translate(460 28)">
+        <circle cx="36" cy="36" r="32" fill="#DCE8E7" stroke="rgba(79,124,130,.18)"/>
+        <path d="M31 34 L38 39 M36 33 L43 38" stroke="#4F7C82" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <text x="92" y="24" class="serif" font-size="25" font-weight="700">UX and Design</text>
+        <text class="small" font-size="17">
+          <tspan x="92" y="58">User-first flows, calm interfaces, visual</tspan>
+          <tspan x="92" y="84">rhythm, and design systems shaped by</tspan>
+          <tspan x="92" y="110">Brij.</tspan>
+        </text>
+      </g>
+      <line x1="848" y1="20" x2="848" y2="150" class="line-strong"/>
+      <g id="process-ai-build" transform="translate(884 28)">
+        <circle cx="36" cy="36" r="32" fill="rgba(124,138,99,.14)" stroke="rgba(124,138,99,.22)"/>
+        <path d="M36 20 C39 30 43 33 54 36 C43 39 39 43 36 54 C33 43 29 39 18 36 C29 33 33 30 36 20 Z" fill="#7C8A63"/>
+        <text x="92" y="24" class="serif" font-size="25" font-weight="700">AI-assisted Build</text>
+        <text class="small" font-size="17">
+          <tspan x="92" y="58">Faster iteration, cleaner structure, and</tspan>
+          <tspan x="92" y="84">implementation brought to life with</tspan>
+          <tspan x="92" y="110">AI-assisted development.</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Selected Work intro -->
+  <g id="selected-work-intro" transform="translate(82 1054)">
+    <text x="0" y="0" class="kicker">Selected work</text>
+    <text x="0" y="48" class="serif" font-size="58" font-weight="700">Projects as product questions.</text>
+    <text class="body">
+      <tspan x="0" y="96">Each project begins as a workflow, a visual idea, or an unclear product problem.</tspan>
+      <tspan x="0" y="131">The work below is framed around why it exists, what it explores, and what it shows.</tspan>
+    </text>
+  </g>
+
+  <!-- Featured case study row: Hoodi -->
+  <g id="case-hoodi" transform="translate(82 1240)">
+    <rect class="surface shadow" x="0" y="0" width="1276" height="260" rx="10"/>
+    <g id="hoodi-preview" transform="translate(28 28)">
+      <rect x="0" y="0" width="354" height="204" rx="8" fill="#0C1117"/>
+      <rect x="0" y="0" width="354" height="204" rx="8" fill="none" stroke="rgba(31,36,48,.16)"/>
+      <rect x="0" y="0" width="70" height="204" fill="#121A27"/>
+      <rect x="18" y="16" width="44" height="24" rx="3" fill="#FF5A0A"/>
+      <rect x="82" y="18" width="220" height="8" rx="4" fill="#E8EDF5" opacity=".75"/>
+      <rect x="82" y="48" width="92" height="8" rx="4" fill="#E8EDF5" opacity=".55"/>
+      <rect x="82" y="76" width="114" height="48" rx="9" fill="#151E2D" stroke="rgba(255,255,255,.08)"/>
+      <rect x="208" y="76" width="114" height="48" rx="9" fill="#151E2D" stroke="rgba(255,255,255,.08)"/>
+      <rect x="82" y="140" width="240" height="11" rx="5" fill="#2DB99A"/>
+      <rect x="82" y="160" width="188" height="28" rx="8" fill="#151E2D" stroke="rgba(255,255,255,.08)"/>
+    </g>
+
+    <g transform="translate(426 32)">
+      <text x="0" y="0" class="kicker cool">Prompt ops / prompt workspace</text>
+      <text x="0" y="48" class="serif" font-size="48" font-weight="700">Hoodi</text>
+      <text x="0" y="84" class="sans accent" font-size="21" font-weight="800">Question: How can prompt testing feel less chaotic?</text>
+      <text class="body" font-size="19">
+        <tspan x="0" y="128">A prompt-ops workspace for comparing runs, managing versions, and making</tspan>
+        <tspan x="0" y="158">AI work easier to evaluate with clarity.</tspan>
+      </text>
+      <g transform="translate(0 184)">
+        <rect x="0" y="0" width="116" height="34" rx="7" class="soft"/>
+        <text x="58" y="22" class="small" font-weight="800" text-anchor="middle">Product UX</text>
+        <rect x="128" y="0" width="122" height="34" rx="7" class="soft"/>
+        <text x="189" y="22" class="small" font-weight="800" text-anchor="middle">AI Workflows</text>
+        <rect x="262" y="0" width="124" height="34" rx="7" class="soft"/>
+        <text x="324" y="22" class="small" font-weight="800" text-anchor="middle">Interface Clarity</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Secondary case rows -->
+  <g id="secondary-work" transform="translate(82 1542)">
+    <g id="case-silkboard">
+      <rect class="surface shadow" x="0" y="0" width="620" height="150" rx="10"/>
+      <text x="24" y="34" class="kicker moss">Practical utility</text>
+      <text x="24" y="76" class="serif" font-size="34" font-weight="700">Silkboard</text>
+      <text x="24" y="108" class="small">A thoughtful calculator for ESOP earnings, taxes, and decision clarity.</text>
+    </g>
+    <g id="case-ulsoor" transform="translate(656 0)">
+      <rect class="surface shadow" x="0" y="0" width="620" height="150" rx="10"/>
+      <text x="24" y="34" class="kicker accent">Cultural geometry</text>
+      <text x="24" y="76" class="serif" font-size="34" font-weight="700">Ulsoor</text>
+      <text x="24" y="108" class="small">A kolam explorer blending tradition, pattern logic, and visual systems.</text>
+    </g>
+  </g>
+</svg>

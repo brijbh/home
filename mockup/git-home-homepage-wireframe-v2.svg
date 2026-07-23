@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2520" viewBox="0 0 1440 2520" role="img" aria-labelledby="title desc">
+  <title id="title">Git Home homepage editorial wireframe v2</title>
+  <desc id="desc">A warm editorial landing page wireframe for Brij's Git Home portfolio, with terminal-style identity, page links, mental model boxes, featured project stories, artwork previews, and terminal footer.</desc>
+  <defs>
+    <style>
+      :root {
+        --page: #F6F1E8;
+        --wash: #EFE7DB;
+        --surface: #FFF9F2;
+        --soft: #F3ECE2;
+        --text: #1F2430;
+        --secondary: #5F6773;
+        --muted: #7B8391;
+        --line: rgba(31, 36, 48, 0.12);
+        --line-strong: rgba(31, 36, 48, 0.18);
+        --accent: #C96A3D;
+        --cool: #4F7C82;
+        --cool-soft: #DCE8E7;
+        --moss: #7C8A63;
+        --clay: #8B5E3C;
+        --terminal: #101417;
+        --terminal-text: #ECE2D0;
+        --terminal-green: #8ECF65;
+      }
+      .bg { fill: var(--page); }
+      .wash { fill: var(--wash); }
+      .surface { fill: var(--surface); stroke: var(--line); }
+      .soft { fill: var(--soft); stroke: var(--line); }
+      .line { stroke: var(--line); stroke-width: 1; }
+      .dotted { stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 1 13; }
+      .serif { font-family: Georgia, 'Times New Roman', serif; fill: var(--text); }
+      .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: var(--text); }
+      .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
+      .kicker { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+      .body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--secondary); font-size: 21px; }
+      .small { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--secondary); font-size: 15px; }
+      .muted { fill: var(--muted); }
+      .accent { fill: var(--accent); }
+      .cool { fill: var(--cool); }
+      .moss { fill: var(--moss); }
+      .clay { fill: var(--clay); }
+      .shadow { filter: drop-shadow(0 14px 34px rgba(60, 40, 20, .09)); }
+      .terminal { fill: var(--terminal); stroke: rgba(201, 106, 61, .35); }
+      .terminalText { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: var(--terminal-text); }
+      .terminalGreen { fill: var(--terminal-green); }
+      .terminalGold { fill: #E6C66A; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1440" height="2520"/>
+  <path class="wash" opacity=".68" d="M0 620 C290 520 495 606 750 542 C1016 474 1205 455 1440 340 L1440 2520 L0 2520 Z"/>
+  <path class="wash" opacity=".75" d="M0 1910 C330 1815 570 1885 800 1818 C1070 1738 1230 1760 1440 1658 L1440 2520 L0 2520 Z"/>
+
+  <!-- Brand and terminal identity -->
+  <g id="top" transform="translate(82 40)">
+    <g transform="translate(0 3)">
+      <path d="M22 0 L44 14 L44 55 L0 55 L0 14 Z" fill="none" stroke="#C96A3D" stroke-width="3" stroke-linejoin="round"/>
+      <text x="22" y="38" text-anchor="middle" class="serif accent" font-size="27" font-weight="700">G</text>
+      <rect x="31" y="38" width="9" height="17" fill="#F6F1E8" stroke="#C96A3D" stroke-width="2"/>
+    </g>
+    <text x="68" y="22" class="kicker">Portfolio of Brij</text>
+    <text x="68" y="59" class="serif" font-size="34" font-weight="700">Git Home</text>
+    <g transform="translate(858 0)">
+      <rect class="terminal shadow" x="0" y="0" width="418" height="84" rx="10"/>
+      <circle cx="24" cy="22" r="5" fill="#C96A3D"/>
+      <circle cx="42" cy="22" r="5" fill="#E6C66A"/>
+      <circle cx="60" cy="22" r="5" fill="#7C8A63"/>
+      <text x="24" y="54" class="terminalText" font-size="15"><tspan class="terminalGreen">brij@home</tspan>:~$ asato ma sadgamaya</text>
+    </g>
+    <line x1="0" y1="112" x2="1276" y2="112" class="line"/>
+  </g>
+
+  <!-- Hero statement -->
+  <g id="hero" transform="translate(82 210)">
+    <text class="serif" font-size="82" font-weight="700" letter-spacing="0">
+      <tspan x="0" y="78">Built from curiosity, shaped by</tspan>
+      <tspan x="0" y="166">product thinking, and refined</tspan>
+      <tspan x="0" y="254">through design.</tspan>
+    </text>
+    <text class="body">
+      <tspan x="0" y="326">I explore ideas by turning them into usable tools, visual systems, and working</tspan>
+      <tspan x="0" y="362">prototypes, combining UX, design craft, technical understanding, and</tspan>
+      <tspan x="0" y="398">AI-assisted development.</tspan>
+    </text>
+    <g transform="translate(0 470)">
+      <line x1="0" y1="0" x2="1276" y2="0" class="line"/>
+      <line x1="0" y1="76" x2="1276" y2="76" class="line"/>
+      <text x="0" y="48" class="sans" font-size="18" font-weight="800">Work</text>
+      <text x="172" y="48" class="sans" font-size="18" font-weight="800">Art</text>
+      <text x="326" y="48" class="sans" font-size="18" font-weight="800">About</text>
+      <text x="500" y="48" class="sans" font-size="18" font-weight="800">Notes</text>
+      <text x="1120" y="48" class="small">No heavy navigation, just clear paths</text>
+    </g>
+  </g>
+
+  <!-- Mental model boxes -->
+  <g id="mental-model" transform="translate(82 800)">
+    <text x="0" y="0" class="kicker">Mental model</text>
+    <text x="0" y="46" class="serif" font-size="46" font-weight="700">What I try to bring into every project.</text>
+    <g transform="translate(0 92)">
+      <rect class="surface shadow" x="0" y="0" width="1276" height="170" rx="9"/>
+      <g transform="translate(36 28)">
+        <circle cx="36" cy="36" r="32" fill="#F3DFD3" stroke="rgba(201,106,61,.2)"/>
+        <circle cx="36" cy="36" r="5" fill="none" stroke="#C96A3D" stroke-width="1.3" stroke-dasharray="2 2"/>
+        <text x="92" y="24" class="serif" font-size="25" font-weight="700">Concept</text>
+        <text class="small" font-size="17">
+          <tspan x="92" y="58">Clear product framing, practical problem</tspan>
+          <tspan x="92" y="84">definition, and thoughtful idea shaping.</tspan>
+        </text>
+      </g>
+      <line x1="424" y1="20" x2="424" y2="150" class="line"/>
+      <g transform="translate(460 28)">
+        <circle cx="36" cy="36" r="32" fill="#DCE8E7" stroke="rgba(79,124,130,.2)"/>
+        <path d="M31 34 L38 39 M36 33 L43 38" stroke="#4F7C82" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <text x="92" y="24" class="serif" font-size="25" font-weight="700">UX and Design</text>
+        <text class="small" font-size="17">
+          <tspan x="92" y="58">User-first flows, calm interfaces, visual</tspan>
+          <tspan x="92" y="84">rhythm, and systems shaped with care.</tspan>
+        </text>
+      </g>
+      <line x1="848" y1="20" x2="848" y2="150" class="line"/>
+      <g transform="translate(884 28)">
+        <circle cx="36" cy="36" r="32" fill="rgba(124,138,99,.14)" stroke="rgba(124,138,99,.22)"/>
+        <path d="M36 20 C39 30 43 33 54 36 C43 39 39 43 36 54 C33 43 29 39 18 36 C29 33 33 30 36 20 Z" fill="#7C8A63"/>
+        <text x="92" y="24" class="serif" font-size="25" font-weight="700">AI-assisted Build</text>
+        <text class="small" font-size="17">
+          <tspan x="92" y="58">Faster iteration, cleaner structure, and</tspan>
+          <tspan x="92" y="84">implementation with technical judgment.</tspan>
+        </text>
+      </g>
+    </g>
+    <line x1="500" y1="318" x2="776" y2="318" class="dotted"/>
+  </g>
+
+  <!-- Featured project story rows -->
+  <g id="project-stories" transform="translate(82 1240)">
+    <text x="0" y="0" class="kicker">Selected work</text>
+    <text x="0" y="52" class="serif" font-size="58" font-weight="700">Projects as questions, not just links.</text>
+
+    <g id="story-hoodi" transform="translate(0 118)">
+      <rect class="surface shadow" x="0" y="0" width="1276" height="286" rx="10"/>
+      <g transform="translate(32 30)">
+        <rect x="0" y="0" width="394" height="226" rx="9" fill="#0C1117"/>
+        <rect x="0" y="0" width="394" height="226" rx="9" fill="none" stroke="rgba(31,36,48,.18)"/>
+        <rect x="0" y="0" width="78" height="226" fill="#121A27"/>
+        <rect x="18" y="16" width="48" height="28" rx="4" fill="#FF5A0A"/>
+        <rect x="92" y="20" width="232" height="9" rx="4" fill="#E8EDF5" opacity=".72"/>
+        <rect x="92" y="54" width="120" height="8" rx="4" fill="#E8EDF5" opacity=".5"/>
+        <rect x="92" y="86" width="122" height="54" rx="9" fill="#151E2D" stroke="rgba(255,255,255,.08)"/>
+        <rect x="228" y="86" width="122" height="54" rx="9" fill="#151E2D" stroke="rgba(255,255,255,.08)"/>
+        <rect x="92" y="160" width="258" height="11" rx="5" fill="#2DB99A"/>
+        <rect x="92" y="184" width="212" height="26" rx="8" fill="#151E2D" stroke="rgba(255,255,255,.08)"/>
+      </g>
+      <g transform="translate(474 38)">
+        <text x="0" y="0" class="kicker cool">Question</text>
+        <text x="0" y="40" class="serif" font-size="36" font-weight="700">How can prompt testing feel less chaotic?</text>
+        <text class="body" font-size="19">
+          <tspan x="0" y="88">Hoodi is a prompt-ops workspace for testing, comparing, versioning, and</tspan>
+          <tspan x="0" y="119">reviewing AI work with clearer product judgment.</tspan>
+        </text>
+        <g transform="translate(0 162)">
+          <rect x="0" y="0" width="124" height="42" rx="7" fill="#C96A3D"/>
+          <text x="62" y="27" text-anchor="middle" fill="#fff" class="sans" font-size="15" font-weight="800">Read story</text>
+          <rect x="140" y="0" width="112" height="42" rx="7" fill="#FFF9F2" stroke="rgba(31,36,48,.16)"/>
+          <text x="196" y="27" text-anchor="middle" class="sans" font-size="15" font-weight="800">Visit site</text>
+        </g>
+      </g>
+    </g>
+
+    <g id="story-ulsoor" transform="translate(0 456)">
+      <rect class="surface shadow" x="0" y="0" width="1276" height="224" rx="10"/>
+      <g transform="translate(32 28)">
+        <rect x="0" y="0" width="316" height="168" rx="8" fill="#FFF9F2" stroke="rgba(31,36,48,.12)"/>
+        <circle cx="158" cy="84" r="52" fill="none" stroke="#C96A3D" stroke-width="2"/>
+        <circle cx="112" cy="84" r="7" fill="#C96A3D"/>
+        <circle cx="158" cy="42" r="7" fill="#C96A3D"/>
+        <circle cx="204" cy="84" r="7" fill="#C96A3D"/>
+        <circle cx="158" cy="126" r="7" fill="#C96A3D"/>
+      </g>
+      <g transform="translate(406 38)">
+        <text x="0" y="0" class="kicker accent">Kolam systems</text>
+        <text x="0" y="42" class="serif" font-size="34" font-weight="700">What makes a traditional pattern feel learnable?</text>
+        <text class="body" font-size="18">
+          <tspan x="0" y="86">A visual exploration of sikku kolam through dots, curves, steps, and cultural rhythm.</tspan>
+        </text>
+        <text x="0" y="144" class="sans accent" font-size="16" font-weight="800">Open project page -></text>
+      </g>
+    </g>
+
+    <g id="story-domlur" transform="translate(0 720)">
+      <rect class="surface shadow" x="0" y="0" width="1276" height="224" rx="10"/>
+      <g transform="translate(32 28)">
+        <rect x="0" y="0" width="316" height="168" rx="8" fill="#DCE8E7" stroke="rgba(31,36,48,.12)"/>
+        <path d="M38 130 C84 20 145 158 190 54 S280 64 292 132" fill="none" stroke="#4F7C82" stroke-width="8" stroke-linecap="round"/>
+        <path d="M44 48 C102 116 166 22 232 120" fill="none" stroke="#8B5E3C" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+      </g>
+      <g transform="translate(406 38)">
+        <text x="0" y="0" class="kicker cool">Generative visual play</text>
+        <text x="0" y="42" class="serif" font-size="34" font-weight="700">How can randomness become a usable visual system?</text>
+        <text class="body" font-size="18">
+          <tspan x="0" y="86">A playful pattern generator shaped around rhythm, constraint, variation, and control.</tspan>
+        </text>
+        <text x="0" y="144" class="sans accent" font-size="16" font-weight="800">Open project page -></text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Artwork preview -->
+  <g id="artwork" transform="translate(82 2220)">
+    <line x1="0" y1="-58" x2="1276" y2="-58" class="line"/>
+    <text x="0" y="0" class="kicker">Sketchbook</text>
+    <text x="0" y="44" class="serif" font-size="42" font-weight="700">Small visual studies, not a separate personality.</text>
+    <g transform="translate(0 84)">
+      <rect class="surface shadow" x="0" y="0" width="398" height="150" rx="10"/>
+      <rect x="20" y="20" width="112" height="110" rx="7" fill="#F3DFD3"/>
+      <text x="158" y="56" class="serif" font-size="25" font-weight="700">Ink study</text>
+      <text x="158" y="88" class="small">Single artwork page with previous / next controls.</text>
+      <text x="158" y="122" class="sans accent" font-size="14" font-weight="800">View piece -></text>
+    </g>
+    <g transform="translate(438 84)">
+      <rect class="surface shadow" x="0" y="0" width="398" height="150" rx="10"/>
+      <rect x="20" y="20" width="112" height="110" rx="7" fill="#DCE8E7"/>
+      <text x="158" y="56" class="serif" font-size="25" font-weight="700">Pattern note</text>
+      <text x="158" y="88" class="small">Card links into the art gallery and related work.</text>
+      <text x="158" y="122" class="sans accent" font-size="14" font-weight="800">View piece -></text>
+    </g>
+    <g transform="translate(878 84)">
+      <rect class="surface shadow" x="0" y="0" width="398" height="150" rx="10"/>
+      <rect x="20" y="20" width="112" height="110" rx="7" fill="#EFE7DB"/>
+      <text x="158" y="56" class="serif" font-size="25" font-weight="700">Line work</text>
+      <text x="158" y="88" class="small">A lighter entry point into the broader sketch archive.</text>
+      <text x="158" y="122" class="sans accent" font-size="14" font-weight="800">View piece -></text>
+    </g>
+  </g>
+
+  <!-- Terminal footer -->
+  <g id="footer" transform="translate(82 2442)">
+    <rect class="terminal" x="0" y="0" width="1276" height="54" rx="8"/>
+    <text x="24" y="34" class="terminalText" font-size="15"><tspan class="terminalGreen">brij@home</tspan>:~$ open --work --art --about</text>
+    <text x="880" y="34" class="terminalText" font-size="15">Concept, UX, design, and AI-assisted build by Brij.</text>
+  </g>
+</svg>

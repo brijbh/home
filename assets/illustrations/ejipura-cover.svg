@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="Abstract conversation map on paper">
+  <rect width="760" height="420" fill="#efe4d0"/>
+  <g opacity=".25" stroke="#b8995d" stroke-width="1"><path d="M0 70H760M0 140H760M0 210H760M0 280H760M0 350H760M95 0V420M190 0V420M285 0V420M380 0V420M475 0V420M570 0V420M665 0V420"/></g>
+  <circle cx="610" cy="92" r="34" fill="#d83b18"/>
+  <g fill="none" stroke="#1d2328" stroke-width="2" opacity=".65">
+    <path d="M117 289C170 202 259 180 334 226s148 12 203-68"/>
+    <path d="M128 115c52 82 118 123 198 118 74-4 100-70 154-52 35 11 56 42 84 68"/>
+    <path d="M190 312c53-68 111-88 174-60 46 21 97 23 152-15"/>
+  </g>
+  <g fill="#1d2328"><circle cx="128" cy="115" r="5"/><circle cx="206" cy="211" r="5"/><circle cx="334" cy="226" r="5"/><circle cx="480" cy="181" r="5"/><circle cx="564" cy="249" r="5"/><circle cx="190" cy="312" r="5"/><circle cx="364" cy="252" r="5"/></g>
+</svg>

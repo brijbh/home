@@ -1,0 +1,50 @@
+[
+  {
+    "id": "bg-2-50",
+    "visible": true,
+    "featured": true,
+    "order": 1,
+    "sanskrit": "योगः कर्मसु कौशलम्",
+    "transliteration": "yogaḥ karmasu kauśalam",
+    "translation": "Yoga is skill in action.",
+    "source": "Bhagavad Gita",
+    "reference": "2.50",
+    "explanation": "Act with steadiness and care. The work itself becomes a disciplined practice."
+  },
+  {
+    "id": "bg-4-38",
+    "visible": true,
+    "featured": true,
+    "order": 2,
+    "sanskrit": "न हि ज्ञानेन सदृशं पवित्रमिह विद्यते",
+    "transliteration": "na hi jñānena sadṛśaṁ pavitram iha vidyate",
+    "translation": "There is nothing purifying here comparable to knowledge.",
+    "source": "Bhagavad Gita",
+    "reference": "4.38",
+    "explanation": "Knowledge clears confusion and reveals what is true enough to act on."
+  },
+  {
+    "id": "taittiriya-2-1-1",
+    "visible": true,
+    "featured": true,
+    "order": 3,
+    "sanskrit": "सत्यं ज्ञानमनन्तं ब्रह्म",
+    "transliteration": "satyaṁ jñānam anantaṁ brahma",
+    "translation": "Brahman is truth, knowledge and infinity.",
+    "source": "Taittiriya Upanishad",
+    "reference": "2.1.1",
+    "explanation": "A compact statement on reality as truth, knowledge and the unbounded."
+  },
+  {
+    "id": "isha-1",
+    "visible": true,
+    "featured": true,
+    "order": 4,
+    "sanskrit": "ईशावास्यमिदं सर्वं",
+    "transliteration": "īśāvāsyam idaṁ sarvam",
+    "translation": "All this is pervaded by the Lord.",
+    "source": "Isha Upanishad",
+    "reference": "1",
+    "explanation": "A reminder to see the world as interconnected and worthy of care."
+  }
+]

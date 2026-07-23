@@ -1,0 +1,160 @@
+[
+  {
+    "id": "hoodi",
+    "visible": true,
+    "featured": true,
+    "order": 1,
+    "name": "Hoodi",
+    "question": "What if prompt work felt less like chat history and more like an intentional product practice?",
+    "shortDescription": "A prompt operations workspace that helps teams build, test, organize, and improve AI workflows.",
+    "status": "Working prototype",
+    "type": "AI product",
+    "categories": [
+      "Product design",
+      "AI workflows",
+      "Systems"
+    ],
+    "icon": "assets/images/hoodi-icon.png",
+    "coverImage": "assets/images/hoodi-card-preview.jpg",
+    "accentColor": "#C1121F",
+    "previewColor": "#780000",
+    "websiteUrl": "https://hoodi.ai",
+    "githubUrl": "",
+    "whyItExists": [
+      "Prompt work quickly becomes fragmented across chats, documents, and individual memory. Hoodi explores a shared workspace where prompts can become visible, testable product assets."
+    ],
+    "productThinking": [
+      "The core object is not a conversation; it is a reusable piece of intent with context, versions, evidence, and ownership.",
+      "The interface favors comparison and recall over novelty, so teams can understand why a prompt changed and what improved."
+    ],
+    "uxDecisions": [
+      "Keep the library scannable with clear status and ownership.",
+      "Use stable, side-by-side evaluation frames instead of hiding outcomes in chat streams.",
+      "Treat technical metadata as useful evidence, but keep it secondary to the task."
+    ],
+    "screenshots": [
+      "assets/images/hoodi-hero-screenshot.png",
+      "assets/images/hoodi-dashboard.png"
+    ],
+    "learnings": [
+      "A strong AI interface needs structure around the model, not just access to it.",
+      "The vocabulary of the product matters as much as the controls: names shape how teams understand their work."
+    ]
+  },
+  {
+    "id": "kolampodu",
+    "visible": true,
+    "featured": true,
+    "order": 2,
+    "name": "Ulsoor / Kolam",
+    "question": "Can an interface reveal the logic of kolam without flattening its cultural and visual richness?",
+    "shortDescription": "A visual learning experiment for understanding sikku kolam through grids, rhythm, and guided practice.",
+    "status": "Design study",
+    "type": "Learning tool",
+    "categories": [
+      "Culture",
+      "Generative systems",
+      "Education"
+    ],
+    "icon": "assets/images/ulsoor-icon.png",
+    "coverImage": "assets/images/ulsoor.png",
+    "accentColor": "#526828",
+    "previewColor": "#005B55",
+    "websiteUrl": "#",
+    "githubUrl": "https://github.com/brijbh/ulsoor",
+    "whyItExists": [
+      "Kolam is encountered as a finished pattern, while its underlying movement is often invisible to a beginner. This study makes the system legible without reducing it to a sterile diagram."
+    ],
+    "productThinking": [
+      "Learning begins with recognition, then tracing, then making.",
+      "The experience uses constraints as scaffolding: the dot field gives structure while the line retains expression."
+    ],
+    "uxDecisions": [
+      "Show one transformation at a time.",
+      "Keep cultural notes near the act of making, not in a detached information panel.",
+      "Use warm, tactile surfaces so the tool feels closer to practice than software."
+    ],
+    "screenshots": [
+      "assets/images/kolampodu.png"
+    ],
+    "learnings": [
+      "Instruction can live inside the interaction instead of preceding it.",
+      "A generative system becomes approachable when its constraints are shown as invitations."
+    ]
+  },
+  {
+    "id": "domlur",
+    "visible": true,
+    "featured": true,
+    "order": 3,
+    "name": "Domlur",
+    "question": "How might a small set of rules become an expressive playground rather than a configuration form?",
+    "shortDescription": "A playful pattern generator where simple controls create distinctive visual systems.",
+    "status": "Prototype",
+    "type": "Creative tool",
+    "categories": [
+      "Creative coding",
+      "Interaction",
+      "Visual systems"
+    ],
+    "icon": "assets/images/domlur-icon.svg",
+    "coverImage": "assets/images/domlur.png",
+    "accentColor": "#669BBC",
+    "previewColor": "#003049",
+    "websiteUrl": "#",
+    "githubUrl": "",
+    "whyItExists": [
+      "Generative tools often expose every parameter and make exploration feel technical. Domlur asks how a compact set of meaningful choices can keep experimentation immediate."
+    ],
+    "productThinking": [
+      "The output should change noticeably with every choice, making cause and effect easy to learn.",
+      "Useful constraints create authorship: the system provides coherence while the person provides taste."
+    ],
+    "uxDecisions": [
+      "Group controls by visual consequence rather than implementation detail.",
+      "Keep the canvas visible and stable while values change.",
+      "Offer strong defaults so the first result already feels intentional."
+    ],
+    "screenshots": [
+      "assets/images/domlur-canvas.png"
+    ],
+    "learnings": [
+      "Fewer controls can create more confident play.",
+      "Fast visual feedback makes documentation almost unnecessary."
+    ]
+  },
+  {
+    "id": "silkboard",
+    "visible": true,
+    "featured": false,
+    "order": 4,
+    "name": "Silkboard",
+    "question": "Can text transformation feel direct, private, and pleasantly boring?",
+    "shortDescription": "A focused browser utility for cleaning and reshaping text without sending it away.",
+    "status": "Utility",
+    "type": "Local-first tool",
+    "categories": [
+      "Text",
+      "Privacy"
+    ],
+    "icon": "assets/icons/bb-icon.svg",
+    "coverImage": "assets/illustrations/hopefarm-cover.svg",
+    "accentColor": "#CC5500",
+    "previewColor": "#FDF0D5",
+    "websiteUrl": "#",
+    "githubUrl": "",
+    "whyItExists": [
+      "Small text tasks should not require accounts, uploads, or a complicated editor."
+    ],
+    "productThinking": [
+      "Do one transformation clearly and preserve the original."
+    ],
+    "uxDecisions": [
+      "Put input, action, and result in one view."
+    ],
+    "screenshots": [],
+    "learnings": [
+      "Restraint is a product feature."
+    ]
+  }
+]

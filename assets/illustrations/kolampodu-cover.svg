@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="Sikku kolam line study">
+  <rect width="760" height="420" fill="#efe4d0"/>
+  <g opacity=".22" stroke="#b8995d"><path d="M0 40H760M0 80H760M0 120H760M0 160H760M0 200H760M0 240H760M0 280H760M0 320H760M0 360H760M40 0V420M80 0V420M120 0V420M160 0V420M200 0V420M240 0V420M280 0V420M320 0V420M360 0V420M400 0V420M440 0V420M480 0V420M520 0V420M560 0V420M600 0V420M640 0V420M680 0V420M720 0V420"/></g>
+  <g transform="translate(220 55)" fill="none" stroke="#1d2328" stroke-width="4" stroke-linecap="round">
+    <path d="M160 0C80 48 42 88 42 132s38 84 118 132c80-48 118-88 118-132S240 48 160 0z"/>
+    <path d="M160 58c-43 28-64 52-64 74s21 46 64 74c43-28 64-52 64-74s-21-46-64-74z"/>
+    <path d="M42 132h236M160 0v264"/>
+  </g>
+  <g fill="#1d2328" opacity=".7"><circle cx="300" cy="131" r="5"/><circle cx="380" cy="131" r="5"/><circle cx="300" cy="211" r="5"/><circle cx="380" cy="211" r="5"/><circle cx="340" cy="91" r="5"/><circle cx="340" cy="251" r="5"/></g>
+</svg>

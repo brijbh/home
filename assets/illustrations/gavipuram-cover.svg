@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="Indigo temple study">
+  <rect width="760" height="420" fill="#10243b"/>
+  <path d="M0 348C130 291 207 310 314 267c118-48 246-31 446-88v241H0z" fill="#07111f" opacity=".45"/>
+  <g stroke="#c8a555" stroke-width="2" fill="none" opacity=".55"><path d="M0 82c148 35 239 34 361 7 164-37 248-21 399 8"/><path d="M0 128c169 31 292 19 401-12 132-38 214-26 359-3"/></g>
+  <g stroke="#efe4d0" stroke-width="3" fill="none"><path d="M382 91l-63 186h127z"/><path d="M382 62l-21 52h42z"/><path d="M305 277h154"/><path d="M334 277v-62h96v62"/><path d="M352 188h60M342 216h80M331 244h102"/></g>
+  <circle cx="600" cy="110" r="36" fill="#c73b1d" opacity=".9"/>
+</svg>

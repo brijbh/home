@@ -1,0 +1,338 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="3200" viewBox="0 0 2400 3200" role="img" aria-labelledby="title desc">
+  <title id="title">Git Home page system wireframes v1</title>
+  <desc id="desc">Wireframes for the Git Home supporting page system: apps index, single app case study, art gallery, single artwork, and about page.</desc>
+  <defs>
+    <style>
+      :root {
+        --paper: #FDF0D5;
+        --warm: #F6F1E8;
+        --surface: #FFF9F2;
+        --soft: #F3ECE2;
+        --ink: #003049;
+        --red-deep: #780000;
+        --red: #C1121F;
+        --blue: #669BBC;
+        --olive: #526828;
+        --orange: #CC5500;
+        --teal: #005B55;
+        --green: #0DB729;
+        --line: rgba(0, 48, 73, .14);
+        --line-strong: rgba(0, 48, 73, .22);
+        --muted: rgba(0, 48, 73, .68);
+      }
+      .page { fill: var(--paper); }
+      .wash { fill: var(--warm); }
+      .surface { fill: var(--surface); stroke: var(--line); }
+      .soft { fill: var(--soft); stroke: var(--line); }
+      .terminal { fill: var(--ink); stroke: rgba(253, 240, 213, .22); }
+      .line { stroke: var(--line); stroke-width: 1; }
+      .lineStrong { stroke: var(--line-strong); stroke-width: 1; }
+      .dash { stroke: var(--orange); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 2 12; }
+      .serif { font-family: Georgia, 'Times New Roman', serif; fill: var(--ink); }
+      .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: var(--ink); }
+      .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
+      .kicker { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--orange); font-size: 13px; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; }
+      .body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--muted); font-size: 17px; }
+      .small { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--muted); font-size: 13px; }
+      .terminalText { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #FDF0D5; font-size: 13px; }
+      .green { fill: var(--green); }
+      .blue { fill: var(--blue); }
+      .red { fill: var(--red); }
+      .redDeep { fill: var(--red-deep); }
+      .olive { fill: var(--olive); }
+      .orange { fill: var(--orange); }
+      .teal { fill: var(--teal); }
+      .shadow { filter: drop-shadow(0 12px 28px rgba(0, 48, 73, .08)); }
+      .frameLabel { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: rgba(0,48,73,.5); font-size: 16px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <rect width="2400" height="3200" fill="#E7DECE"/>
+
+  <!-- Shared mini header symbol -->
+  <symbol id="mini-header" viewBox="0 0 560 76">
+    <path d="M20 4 L40 16 L40 52 L0 52 L0 16 Z" fill="none" stroke="#CC5500" stroke-width="3" stroke-linejoin="round"/>
+    <text x="20" y="38" text-anchor="middle" class="serif orange" font-size="24" font-weight="700">G</text>
+    <text x="58" y="22" class="kicker">Git Home</text>
+    <text x="58" y="50" class="small">Portfolio of Brij</text>
+    <line x1="0" y1="75" x2="560" y2="75" class="line"/>
+  </symbol>
+
+  <!-- Apps index -->
+  <g id="apps-index" transform="translate(80 80)">
+    <text x="0" y="-26" class="frameLabel">01 / Apps Index</text>
+    <rect class="page shadow" x="0" y="0" width="680" height="920" rx="18"/>
+    <use href="#mini-header" x="48" y="42" width="560" height="76"/>
+    <g transform="translate(48 160)">
+      <text x="0" y="0" class="kicker">My apps</text>
+      <text class="serif" font-size="52" font-weight="700">
+        <tspan x="0" y="58">Tools, prototypes,</tspan>
+        <tspan x="0" y="114">and product studies.</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="158">A library of working ideas, each framed around</tspan>
+        <tspan x="0" y="184">what it solves, why it exists, and what I learned.</tspan>
+      </text>
+    </g>
+    <g transform="translate(48 400)">
+      <rect class="terminal" x="0" y="0" width="584" height="54" rx="9"/>
+      <text x="18" y="34" class="terminalText"><tspan class="green">filter</tspan> --featured --all --experiments</text>
+    </g>
+    <g transform="translate(48 492)">
+      <g>
+        <rect class="surface shadow" x="0" y="0" width="584" height="132" rx="10"/>
+        <rect x="18" y="18" width="132" height="96" rx="8" fill="#003049"/>
+        <rect x="18" y="18" width="36" height="96" rx="8" fill="#122C3E"/>
+        <rect x="168" y="24" width="52" height="52" rx="10" fill="#CC5500"/>
+        <text x="236" y="44" class="serif" font-size="27" font-weight="700">Hoodi</text>
+        <text x="236" y="74" class="small">How can prompt testing feel less chaotic?</text>
+        <text x="236" y="106" class="sans orange" font-size="13" font-weight="800">Read story -></text>
+      </g>
+      <g transform="translate(0 156)">
+        <rect class="surface shadow" x="0" y="0" width="584" height="132" rx="10"/>
+        <rect x="18" y="18" width="132" height="96" rx="8" fill="#F3ECE2"/>
+        <circle cx="84" cy="66" r="34" fill="none" stroke="#C1121F" stroke-width="3"/>
+        <rect x="168" y="24" width="52" height="52" rx="10" fill="#FDF0D5" stroke="rgba(0,48,73,.18)"/>
+        <text x="236" y="44" class="serif" font-size="27" font-weight="700">Ulsoor</text>
+        <text x="236" y="74" class="small">Kolam as culture, structure, and visual learning.</text>
+        <text x="236" y="106" class="sans orange" font-size="13" font-weight="800">Read story -></text>
+      </g>
+      <g transform="translate(0 312)">
+        <rect class="surface shadow" x="0" y="0" width="584" height="132" rx="10"/>
+        <rect x="18" y="18" width="132" height="96" rx="8" fill="#DCE8E7"/>
+        <path d="M38 86 C64 20 110 114 136 42" fill="none" stroke="#005B55" stroke-width="7" stroke-linecap="round"/>
+        <rect x="168" y="24" width="52" height="52" rx="10" fill="#669BBC"/>
+        <text x="236" y="44" class="serif" font-size="27" font-weight="700">Domlur</text>
+        <text x="236" y="74" class="small">Pattern generation as a playful design system.</text>
+        <text x="236" y="106" class="sans orange" font-size="13" font-weight="800">Read story -></text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Single app page -->
+  <g id="single-app" transform="translate(860 80)">
+    <text x="0" y="-26" class="frameLabel">02 / Single App Case Study</text>
+    <rect class="page shadow" x="0" y="0" width="680" height="920" rx="18"/>
+    <use href="#mini-header" x="48" y="42" width="560" height="76"/>
+    <g transform="translate(48 156)">
+      <rect x="0" y="0" width="72" height="72" rx="14" fill="#CC5500"/>
+      <text x="94" y="28" class="kicker">Prompt ops workspace</text>
+      <text x="94" y="70" class="serif" font-size="46" font-weight="700">Hoodi</text>
+      <text class="serif" font-size="42" font-weight="700">
+        <tspan x="0" y="156">How can prompt testing</tspan>
+        <tspan x="0" y="204">feel less chaotic?</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="254">A case-study page that explains the product thought,</tspan>
+        <tspan x="0" y="280">the interface choices, and the build decisions.</tspan>
+      </text>
+      <g transform="translate(0 324)">
+        <rect x="0" y="0" width="126" height="42" rx="7" fill="#CC5500"/>
+        <text x="63" y="27" fill="#fff" class="sans" font-size="14" font-weight="800" text-anchor="middle">Visit site</text>
+        <rect class="soft" x="142" y="0" width="136" height="42" rx="7"/>
+        <text x="210" y="27" class="sans" font-size="14" font-weight="800" text-anchor="middle">All apps</text>
+      </g>
+    </g>
+    <g transform="translate(48 558)">
+      <rect x="0" y="0" width="584" height="238" rx="12" fill="#003049"/>
+      <rect x="0" y="0" width="114" height="238" fill="#112C3E"/>
+      <rect x="26" y="22" width="58" height="34" rx="4" fill="#CC5500"/>
+      <rect x="138" y="26" width="318" height="10" rx="5" fill="#FDF0D5" opacity=".8"/>
+      <rect x="138" y="70" width="150" height="9" rx="4" fill="#FDF0D5" opacity=".5"/>
+      <rect x="138" y="104" width="162" height="58" rx="10" fill="#174058"/>
+      <rect x="318" y="104" width="162" height="58" rx="10" fill="#174058"/>
+      <rect x="138" y="188" width="310" height="12" rx="6" fill="#0DB729"/>
+    </g>
+    <g transform="translate(48 836)">
+      <text x="0" y="0" class="kicker">Page sections</text>
+      <text x="0" y="34" class="small">Why it exists / product thinking / UX decisions / screenshots / what I learned</text>
+    </g>
+  </g>
+
+  <!-- Art gallery -->
+  <g id="art-gallery" transform="translate(1640 80)">
+    <text x="0" y="-26" class="frameLabel">03 / Art Gallery</text>
+    <rect class="page shadow" x="0" y="0" width="680" height="920" rx="18"/>
+    <use href="#mini-header" x="48" y="42" width="560" height="76"/>
+    <g transform="translate(48 160)">
+      <text x="0" y="0" class="kicker">Sketchbook</text>
+      <text class="serif" font-size="52" font-weight="700">
+        <tspan x="0" y="58">Art, pattern, and</tspan>
+        <tspan x="0" y="114">quiet observation.</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="158">A visual archive of sketches, studies, experiments,</tspan>
+        <tspan x="0" y="184">and handcrafted work.</tspan>
+      </text>
+    </g>
+    <g transform="translate(48 392)">
+      <line x1="0" y1="0" x2="584" y2="0" class="line"/>
+      <text x="0" y="44" class="sans" font-size="15" font-weight="800">All</text>
+      <text x="82" y="44" class="small">Sketch</text>
+      <text x="176" y="44" class="small">Pattern</text>
+      <text x="286" y="44" class="small">Study</text>
+      <line x1="0" y1="70" x2="584" y2="70" class="line"/>
+    </g>
+    <g transform="translate(48 508)">
+      <rect class="surface shadow" x="0" y="0" width="176" height="222" rx="10"/>
+      <rect x="14" y="14" width="148" height="152" rx="8" fill="#F3DFD3"/>
+      <text x="14" y="194" class="serif" font-size="19" font-weight="700">Ink study</text>
+      <rect class="surface shadow" x="204" y="0" width="176" height="276" rx="10"/>
+      <rect x="218" y="14" width="148" height="206" rx="8" fill="#669BBC"/>
+      <text x="218" y="248" class="serif" font-size="19" font-weight="700">Blue rhythm</text>
+      <rect class="surface shadow" x="408" y="0" width="176" height="238" rx="10"/>
+      <rect x="422" y="14" width="148" height="168" rx="8" fill="#526828"/>
+      <text x="422" y="210" class="serif" font-size="19" font-weight="700">Leaf form</text>
+      <rect class="surface shadow" x="0" y="254" width="176" height="244" rx="10"/>
+      <rect x="14" y="268" width="148" height="174" rx="8" fill="#C1121F"/>
+      <text x="14" y="470" class="serif" font-size="19" font-weight="700">Red mark</text>
+      <rect class="surface shadow" x="204" y="310" width="176" height="188" rx="10"/>
+      <rect x="218" y="324" width="148" height="118" rx="8" fill="#CC5500"/>
+      <text x="218" y="470" class="serif" font-size="19" font-weight="700">Warm block</text>
+      <rect class="surface shadow" x="408" y="272" width="176" height="226" rx="10"/>
+      <rect x="422" y="286" width="148" height="156" rx="8" fill="#005B55"/>
+      <text x="422" y="470" class="serif" font-size="19" font-weight="700">Teal field</text>
+    </g>
+  </g>
+
+  <!-- Single artwork -->
+  <g id="single-art" transform="translate(80 1120)">
+    <text x="0" y="-26" class="frameLabel">04 / Single Art Page</text>
+    <rect class="page shadow" x="0" y="0" width="680" height="920" rx="18"/>
+    <use href="#mini-header" x="48" y="42" width="560" height="76"/>
+    <g transform="translate(48 154)">
+      <text x="0" y="0" class="kicker">Sketchbook / Pattern note</text>
+      <text x="0" y="54" class="serif" font-size="48" font-weight="700">Blue rhythm study</text>
+    </g>
+    <g transform="translate(48 250)">
+      <rect class="surface shadow" x="0" y="0" width="584" height="430" rx="12"/>
+      <rect x="26" y="26" width="532" height="378" rx="9" fill="#669BBC"/>
+      <path d="M92 320 C160 80 260 360 340 126 S478 122 514 296" fill="none" stroke="#003049" stroke-width="16" stroke-linecap="round" opacity=".8"/>
+      <path d="M104 126 C210 272 312 72 462 270" fill="none" stroke="#FDF0D5" stroke-width="10" stroke-linecap="round" opacity=".72"/>
+    </g>
+    <g transform="translate(48 724)">
+      <text class="body">
+        <tspan x="0" y="0">A short note about the piece, what I was observing,</tspan>
+        <tspan x="0" y="30">and how it connects to pattern, interface rhythm, or craft.</tspan>
+      </text>
+      <g transform="translate(0 82)">
+        <rect class="soft" x="0" y="0" width="132" height="44" rx="8"/>
+        <text x="66" y="28" class="sans" font-size="14" font-weight="800" text-anchor="middle">&lt;- Previous</text>
+        <rect x="452" y="0" width="132" height="44" rx="8" fill="#CC5500"/>
+        <text x="518" y="28" fill="#fff" class="sans" font-size="14" font-weight="800" text-anchor="middle">Next -></text>
+      </g>
+    </g>
+  </g>
+
+  <!-- About page -->
+  <g id="about-page" transform="translate(860 1120)">
+    <text x="0" y="-26" class="frameLabel">05 / About Me</text>
+    <rect class="page shadow" x="0" y="0" width="680" height="920" rx="18"/>
+    <use href="#mini-header" x="48" y="42" width="560" height="76"/>
+    <g transform="translate(48 160)">
+      <text x="0" y="0" class="kicker">About Brij</text>
+      <text class="serif" font-size="52" font-weight="700">
+        <tspan x="0" y="58">Product thinking,</tspan>
+        <tspan x="0" y="114">design craft, and</tspan>
+        <tspan x="0" y="170">technical clarity.</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="222">A profile page that reads like a thoughtful story, not a resume dump.</tspan>
+      </text>
+    </g>
+    <g transform="translate(48 440)">
+      <rect class="terminal" x="0" y="0" width="584" height="92" rx="10"/>
+      <text x="18" y="34" class="terminalText"><tspan class="green">currently</tspan>: exploring AI, product design, local-first tools</text>
+      <text x="18" y="62" class="terminalText"><tspan fill="#E6C66A">location</tspan>: bengaluru, india</text>
+    </g>
+    <g transform="translate(48 584)">
+      <rect class="surface shadow" x="0" y="0" width="178" height="160" rx="10"/>
+      <text x="20" y="42" class="serif" font-size="24" font-weight="700">15+ years</text>
+      <text x="20" y="76" class="small">technical communication and product clarity</text>
+      <rect class="surface shadow" x="204" y="0" width="178" height="160" rx="10"/>
+      <text x="224" y="42" class="serif" font-size="24" font-weight="700">Design</text>
+      <text x="224" y="76" class="small">UX, visual systems, documentation, interfaces</text>
+      <rect class="surface shadow" x="406" y="0" width="178" height="160" rx="10"/>
+      <text x="426" y="42" class="serif" font-size="24" font-weight="700">Build</text>
+      <text x="426" y="76" class="small">vanilla web, AI-assisted development, prototypes</text>
+    </g>
+    <g transform="translate(48 802)">
+      <line x1="0" y1="0" x2="584" y2="0" class="line"/>
+      <text x="0" y="42" class="sans orange" font-size="15" font-weight="800">LinkedIn</text>
+      <text x="110" y="42" class="sans orange" font-size="15" font-weight="800">GitHub</text>
+      <text x="210" y="42" class="sans orange" font-size="15" font-weight="800">Email</text>
+    </g>
+  </g>
+
+  <!-- Admin concept -->
+  <g id="admin-local" transform="translate(1640 1120)">
+    <text x="0" y="-26" class="frameLabel">06 / Local Admin Concept</text>
+    <rect class="page shadow" x="0" y="0" width="680" height="920" rx="18"/>
+    <use href="#mini-header" x="48" y="42" width="560" height="76"/>
+    <g transform="translate(48 160)">
+      <text x="0" y="0" class="kicker">Local admin</text>
+      <text class="serif" font-size="50" font-weight="700">
+        <tspan x="0" y="58">Edit the site without</tspan>
+        <tspan x="0" y="112">touching code.</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="158">A local-only editor for apps, artwork, page copy, quotes,</tspan>
+        <tspan x="0" y="184">links, and theme values.</tspan>
+      </text>
+    </g>
+    <g transform="translate(48 390)">
+      <rect class="terminal" x="0" y="0" width="584" height="64" rx="10"/>
+      <text x="18" y="40" class="terminalText"><tspan class="green">mode</tspan>: local content editor / export JSON</text>
+    </g>
+    <g transform="translate(48 508)">
+      <rect class="surface shadow" x="0" y="0" width="184" height="128" rx="10"/>
+      <text x="20" y="42" class="serif" font-size="24" font-weight="700">Apps</text>
+      <text x="20" y="74" class="small">Add project, logo, screenshot, story</text>
+      <rect class="surface shadow" x="200" y="0" width="184" height="128" rx="10"/>
+      <text x="220" y="42" class="serif" font-size="24" font-weight="700">Art</text>
+      <text x="220" y="74" class="small">Add image, note, category, order</text>
+      <rect class="surface shadow" x="400" y="0" width="184" height="128" rx="10"/>
+      <text x="420" y="42" class="serif" font-size="24" font-weight="700">Text</text>
+      <text x="420" y="74" class="small">Edit hero, about, footer, shloka</text>
+      <rect class="surface shadow" x="0" y="156" width="284" height="150" rx="10"/>
+      <text x="20" y="42" class="serif" font-size="24" font-weight="700">Theme</text>
+      <g transform="translate(20 66)">
+        <rect x="0" y="0" width="34" height="34" rx="5" fill="#780000"/>
+        <rect x="44" y="0" width="34" height="34" rx="5" fill="#C1121F"/>
+        <rect x="88" y="0" width="34" height="34" rx="5" fill="#FDF0D5" stroke="rgba(0,48,73,.18)"/>
+        <rect x="132" y="0" width="34" height="34" rx="5" fill="#003049"/>
+        <rect x="176" y="0" width="34" height="34" rx="5" fill="#669BBC"/>
+      </g>
+      <rect class="surface shadow" x="304" y="156" width="280" height="150" rx="10"/>
+      <text x="324" y="42" class="serif" font-size="24" font-weight="700">Export</text>
+      <text x="324" y="76" class="small">Download updated JSON and assets map</text>
+    </g>
+  </g>
+
+  <!-- Notes for responsive behavior -->
+  <g id="responsive-notes" transform="translate(80 2200)">
+    <rect class="terminal shadow" x="0" y="0" width="2240" height="270" rx="14"/>
+    <text x="32" y="48" class="terminalText" font-size="17"><tspan class="green">responsive-rules</tspan>:</text>
+    <text x="32" y="92" class="terminalText" font-size="16">1. Terminal shloka wraps naturally on desktop and tablet; mobile can stack transliteration/translation below the Sanskrit line.</text>
+    <text x="32" y="128" class="terminalText" font-size="16">2. Apps index becomes an app-like vertical list on mobile, with large tap targets and persistent bottom links.</text>
+    <text x="32" y="164" class="terminalText" font-size="16">3. Single app pages prioritize story first, screenshot second; screenshots are evidence, not decoration.</text>
+    <text x="32" y="200" class="terminalText" font-size="16">4. Art gallery can use masonry on desktop and simple two-column / one-column cards on mobile.</text>
+    <text x="32" y="236" class="terminalText" font-size="16">5. Admin is local-only and writes structured content: site, apps, artwork, quotes, theme.</text>
+  </g>
+
+  <!-- Palette strip -->
+  <g id="palette" transform="translate(80 2540)">
+    <text x="0" y="0" class="frameLabel">Palette from Brij's reference</text>
+    <g transform="translate(0 38)">
+      <rect x="0" y="0" width="180" height="88" rx="8" fill="#780000"/><text x="0" y="124" class="small">#780000</text>
+      <rect x="210" y="0" width="180" height="88" rx="8" fill="#C1121F"/><text x="210" y="124" class="small">#C1121F</text>
+      <rect x="420" y="0" width="180" height="88" rx="8" fill="#FDF0D5" stroke="rgba(0,48,73,.18)"/><text x="420" y="124" class="small">#FDF0D5</text>
+      <rect x="630" y="0" width="180" height="88" rx="8" fill="#003049"/><text x="630" y="124" class="small">#003049</text>
+      <rect x="840" y="0" width="180" height="88" rx="8" fill="#669BBC"/><text x="840" y="124" class="small">#669BBC</text>
+      <rect x="1050" y="0" width="180" height="88" rx="8" fill="#526828"/><text x="1050" y="124" class="small">#526828</text>
+      <rect x="1260" y="0" width="180" height="88" rx="8" fill="#CC5500"/><text x="1260" y="124" class="small">#CC5500</text>
+      <rect x="1470" y="0" width="180" height="88" rx="8" fill="#005B55"/><text x="1470" y="124" class="small">teal TBD</text>
+      <rect x="1680" y="0" width="180" height="88" rx="8" fill="#0DB729"/><text x="1680" y="124" class="small">#0DB729</text>
+    </g>
+  </g>
+</svg>

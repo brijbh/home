@@ -1,0 +1,119 @@
+{
+  "id": "git-home",
+  "visible": true,
+  "featured": true,
+  "order": 1,
+  "name": "Namaste ",
+  "fullName": "Brijesh Bhaskaran",
+  "eyebrow": "Product designer · thoughtful builder",
+  "heroHeading": "Built from curiosity, shaped by product thinking, and refined through design.",
+  "heroSupporting": "I explore ideas by turning them into usable tools, visual systems, and working prototypes, combining UX, design craft, technical understanding, and AI-assisted development.",
+  "shloka": {
+    "sanskrit": "योगः कर्मसु कौशलम्",
+    "transliteration": "yogaḥ karmasu kauśalam",
+    "translation": "Yoga is skill in action.",
+    "source": "Bhagavad Gita 2.50"
+  },
+  "pageLinks": [
+    {
+      "id": "apps",
+      "visible": true,
+      "featured": true,
+      "order": 1,
+      "label": "Work",
+      "description": "",
+      "href": "app-pages/app.html"
+    },
+    {
+      "id": "art",
+      "visible": true,
+      "featured": true,
+      "order": 2,
+      "label": "Art",
+      "description": "Studies, marks & visual play",
+      "href": "art-pages/index.html"
+    },
+    {
+      "id": "about",
+      "visible": true,
+      "featured": true,
+      "order": 3,
+      "label": "About",
+      "description": "How I think and work",
+      "href": "about.html"
+    },
+    {
+      "id": "contact",
+      "visible": true,
+      "featured": true,
+      "order": 4,
+      "label": "Notes",
+      "description": "",
+      "href": "mailto:hello@brijeshbhaskaran.com"
+    }
+  ],
+  "mentalModels": [
+    {
+      "id": "concept",
+      "visible": true,
+      "featured": true,
+      "order": 1,
+      "number": "01",
+      "title": "Concept",
+      "copy": "Clear product framing, practical problem definition, and thoughtful idea shaping.",
+      "color": "#C96A3D"
+    },
+    {
+      "id": "design",
+      "visible": true,
+      "featured": true,
+      "order": 2,
+      "number": "02",
+      "title": "UX and Design",
+      "copy": "User-first flows, calm interfaces, visual rhythm, and systems shaped with care.",
+      "color": "#4F7C82"
+    },
+    {
+      "id": "build",
+      "visible": true,
+      "featured": true,
+      "order": 3,
+      "number": "03",
+      "title": "AI-assisted Build",
+      "copy": "Faster iteration, cleaner structure, and implementation with technical judgment.",
+      "color": "#7C8A63"
+    }
+  ],
+  "footer": {
+    "status": "building thoughtful things",
+    "location": "bengaluru, india",
+    "currently": "exploring AI, product design and local-first tools",
+    "signoff": "made with curiosity, chai, and plain HTML"
+  },
+  "social": {
+    "email": "mailto:#",
+    "github": "https://github.com/brijbh",
+    "linkedin": "https://www.linkedin.com/in/brijeshbhaskaran/"
+  },
+  "theme": {
+    "paper": "#FDF0D5",
+    "ink": "#003049",
+    "deepRed": "#780000",
+    "red": "#C1121F",
+    "blue": "#669BBC",
+    "olive": "#526828",
+    "orange": "#CC5500",
+    "green": "#0DB729",
+    "teal": "#005B55",
+    "sectionOverrides": {},
+    "elementOverrides": {}
+  },
+  "motion": {
+    "enabled": true,
+    "terminalTyping": true,
+    "sectionReveal": true,
+    "cardHover": true,
+    "imageHoverZoom": true,
+    "duration": "normal"
+  }
+}

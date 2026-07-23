@@ -1,0 +1,348 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2200" viewBox="0 0 1800 2200" role="img" aria-labelledby="title desc">
+  <title id="title">Git Home mobile page system wireframe</title>
+  <desc id="desc">Mobile-first wireframes for Git Home showing app-like layouts for the homepage, apps page, app detail, art gallery, single art page, about page, and local admin.</desc>
+  <defs>
+    <style>
+      :root {
+        --paper: #FDF0D5;
+        --surface: #FFF9F2;
+        --soft: #F3ECE2;
+        --ink: #003049;
+        --red-deep: #780000;
+        --red: #C1121F;
+        --blue: #669BBC;
+        --olive: #526828;
+        --orange: #CC5500;
+        --teal: #005B55;
+        --green: #0DB729;
+        --line: rgba(0, 48, 73, .14);
+        --muted: rgba(0, 48, 73, .66);
+      }
+      .board { fill: #E7DECE; }
+      .phone { fill: var(--paper); stroke: rgba(0,48,73,.18); stroke-width: 2; }
+      .screen { clip-path: inset(0 round 34px); }
+      .surface { fill: var(--surface); stroke: var(--line); }
+      .soft { fill: var(--soft); stroke: var(--line); }
+      .terminal { fill: var(--ink); }
+      .line { stroke: var(--line); stroke-width: 1; }
+      .dash { stroke: var(--orange); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 1 10; }
+      .serif { font-family: Georgia, 'Times New Roman', serif; fill: var(--ink); }
+      .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: var(--ink); }
+      .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
+      .kicker { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--orange); font-size: 10px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; }
+      .body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--muted); font-size: 13px; }
+      .small { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: var(--muted); font-size: 11px; }
+      .label { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: rgba(0,48,73,.62); font-size: 15px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; }
+      .terminalText { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #FDF0D5; font-size: 10px; }
+      .green { fill: var(--green); }
+      .orange { fill: var(--orange); }
+      .shadow { filter: drop-shadow(0 14px 30px rgba(0,48,73,.13)); }
+      .navText { font-family: Inter, ui-sans-serif, system-ui, sans-serif; fill: #FDF0D5; font-size: 9px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="board" width="1800" height="2200"/>
+
+  <symbol id="phone-shell" viewBox="0 0 360 760">
+    <rect class="phone shadow" x="0" y="0" width="360" height="760" rx="42"/>
+    <rect x="132" y="16" width="96" height="22" rx="11" fill="rgba(0,48,73,.16)"/>
+  </symbol>
+
+  <symbol id="mobile-top" viewBox="0 0 312 48">
+    <path d="M15 4 L30 13 L30 39 L0 39 L0 13 Z" fill="none" stroke="#CC5500" stroke-width="2.3" stroke-linejoin="round"/>
+    <text x="15" y="29" text-anchor="middle" class="serif orange" font-size="18" font-weight="700">G</text>
+    <text x="44" y="20" class="sans" font-size="15" font-weight="800">Git Home</text>
+    <text x="44" y="36" class="small">Portfolio of Brij</text>
+    <circle cx="298" cy="17" r="2" fill="#003049"/>
+    <circle cx="298" cy="25" r="2" fill="#003049"/>
+    <circle cx="298" cy="33" r="2" fill="#003049"/>
+  </symbol>
+
+  <symbol id="bottom-nav" viewBox="0 0 312 62">
+    <rect x="0" y="0" width="312" height="62" rx="18" fill="#003049"/>
+    <text x="31" y="25" text-anchor="middle" fill="#FDF0D5" class="sans" font-size="15">⌂</text>
+    <text x="31" y="45" text-anchor="middle" class="navText">Home</text>
+    <text x="94" y="25" text-anchor="middle" fill="#FDF0D5" class="sans" font-size="15">▣</text>
+    <text x="94" y="45" text-anchor="middle" class="navText">Apps</text>
+    <text x="156" y="25" text-anchor="middle" fill="#FDF0D5" class="sans" font-size="15">✽</text>
+    <text x="156" y="45" text-anchor="middle" class="navText">Art</text>
+    <text x="219" y="25" text-anchor="middle" fill="#FDF0D5" class="sans" font-size="15">♙</text>
+    <text x="219" y="45" text-anchor="middle" class="navText">About</text>
+    <text x="281" y="25" text-anchor="middle" fill="#FDF0D5" class="sans" font-size="15">⚙</text>
+    <text x="281" y="45" text-anchor="middle" class="navText">Menu</text>
+  </symbol>
+
+  <!-- Mobile homepage -->
+  <g id="home-mobile" transform="translate(70 80)">
+    <text x="0" y="-24" class="label">01 / Mobile Home</text>
+    <use href="#phone-shell" width="360" height="760"/>
+    <g class="screen" transform="translate(24 54)">
+      <use href="#mobile-top" width="312" height="48"/>
+      <g transform="translate(0 68)">
+        <rect class="terminal" x="0" y="0" width="312" height="76" rx="12"/>
+        <text x="14" y="24" class="terminalText"><tspan class="green">brij@home</tspan>:~$</text>
+        <text x="14" y="44" class="terminalText">asato ma sadgamaya</text>
+        <text x="14" y="62" class="terminalText" opacity=".72">longer shloka wraps here...</text>
+      </g>
+      <text class="serif" font-size="33" font-weight="700">
+        <tspan x="0" y="196">Built from</tspan>
+        <tspan x="0" y="234">curiosity, shaped by</tspan>
+        <tspan x="0" y="272">product thinking,</tspan>
+        <tspan x="0" y="310">and refined through</tspan>
+        <tspan x="0" y="348">design.</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="384">I explore ideas by turning them into</tspan>
+        <tspan x="0" y="404">usable tools, visual systems, and</tspan>
+        <tspan x="0" y="424">working prototypes.</tspan>
+      </text>
+      <g transform="translate(0 460)">
+        <line x1="0" y1="0" x2="312" y2="0" class="line"/>
+        <rect class="surface" x="0" y="18" width="147" height="46" rx="10"/>
+        <text x="16" y="47" class="sans" font-size="14" font-weight="800">My Apps</text>
+        <rect class="surface" x="165" y="18" width="147" height="46" rx="10"/>
+        <text x="181" y="47" class="sans" font-size="14" font-weight="800">Sketchbook</text>
+        <rect class="surface" x="0" y="76" width="147" height="46" rx="10"/>
+        <text x="16" y="105" class="sans" font-size="14" font-weight="800">About</text>
+        <rect class="surface" x="165" y="76" width="147" height="46" rx="10"/>
+        <text x="181" y="105" class="sans" font-size="14" font-weight="800">Contact</text>
+      </g>
+      <g transform="translate(0 612)">
+        <rect class="surface" x="0" y="0" width="312" height="54" rx="12"/>
+        <circle cx="28" cy="27" r="16" fill="#F3DFD3"/>
+        <text x="56" y="23" class="sans" font-size="14" font-weight="800">Concept</text>
+        <text x="56" y="40" class="small">Problem framing and product clarity</text>
+      </g>
+      <use href="#bottom-nav" x="0" y="634" width="312" height="62"/>
+    </g>
+  </g>
+
+  <!-- Mobile apps -->
+  <g id="apps-mobile" transform="translate(510 80)">
+    <text x="0" y="-24" class="label">02 / My Apps</text>
+    <use href="#phone-shell" width="360" height="760"/>
+    <g class="screen" transform="translate(24 54)">
+      <use href="#mobile-top" width="312" height="48"/>
+      <text x="0" y="96" class="kicker">My apps</text>
+      <text class="serif" font-size="31" font-weight="700">
+        <tspan x="0" y="134">Tools, prototypes,</tspan>
+        <tspan x="0" y="170">and product studies.</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="202">Card-based app library. Each card</tspan>
+        <tspan x="0" y="222">fits its own story and content.</tspan>
+      </text>
+      <g transform="translate(0 254)">
+        <rect class="surface shadow" x="0" y="0" width="312" height="178" rx="14"/>
+        <rect x="16" y="16" width="96" height="70" rx="9" fill="#003049"/>
+        <rect x="16" y="16" width="28" height="70" rx="9" fill="#12364B"/>
+        <rect x="128" y="18" width="44" height="44" rx="10" fill="#CC5500"/>
+        <text x="184" y="38" class="serif" font-size="23" font-weight="700">Hoodi</text>
+        <text x="128" y="82" class="small">How can prompt testing feel less chaotic?</text>
+        <text x="128" y="116" class="small">Prompt ops workspace for comparing runs.</text>
+        <text x="128" y="150" class="sans orange" font-size="12" font-weight="800">Read story -></text>
+      </g>
+      <g transform="translate(0 452)">
+        <rect class="surface shadow" x="0" y="0" width="312" height="148" rx="14"/>
+        <rect x="16" y="16" width="76" height="76" rx="10" fill="#F3ECE2"/>
+        <circle cx="54" cy="54" r="24" fill="none" stroke="#C1121F" stroke-width="3"/>
+        <text x="112" y="38" class="serif" font-size="23" font-weight="700">Ulsoor</text>
+        <text x="112" y="68" class="small">Kolam as culture and visual learning.</text>
+        <text x="112" y="112" class="sans orange" font-size="12" font-weight="800">Read story -></text>
+      </g>
+      <use href="#bottom-nav" x="0" y="634" width="312" height="62"/>
+    </g>
+  </g>
+
+  <!-- Mobile app detail -->
+  <g id="app-detail-mobile" transform="translate(950 80)">
+    <text x="0" y="-24" class="label">03 / App Detail</text>
+    <use href="#phone-shell" width="360" height="760"/>
+    <g class="screen" transform="translate(24 54)">
+      <use href="#mobile-top" width="312" height="48"/>
+      <g transform="translate(0 82)">
+        <rect x="0" y="0" width="58" height="58" rx="13" fill="#CC5500"/>
+        <text x="76" y="22" class="kicker">Prompt ops workspace</text>
+        <text x="76" y="58" class="serif" font-size="33" font-weight="700">Hoodi</text>
+      </g>
+      <text class="serif" font-size="29" font-weight="700">
+        <tspan x="0" y="190">How can prompt</tspan>
+        <tspan x="0" y="224">testing feel less</tspan>
+        <tspan x="0" y="258">chaotic?</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="294">A case-study page starts with why,</tspan>
+        <tspan x="0" y="314">then shows screenshots as evidence.</tspan>
+      </text>
+      <g transform="translate(0 342)">
+        <rect x="0" y="0" width="132" height="44" rx="10" fill="#CC5500"/>
+        <text x="66" y="28" fill="#fff" class="sans" font-size="13" font-weight="800" text-anchor="middle">Visit site</text>
+        <rect class="soft" x="150" y="0" width="112" height="44" rx="10"/>
+        <text x="206" y="28" class="sans" font-size="13" font-weight="800" text-anchor="middle">All apps</text>
+      </g>
+      <g transform="translate(0 416)">
+        <rect x="0" y="0" width="312" height="162" rx="12" fill="#003049"/>
+        <rect x="0" y="0" width="64" height="162" fill="#12364B"/>
+        <rect x="16" y="16" width="34" height="22" rx="4" fill="#CC5500"/>
+        <rect x="82" y="18" width="154" height="8" rx="4" fill="#FDF0D5" opacity=".75"/>
+        <rect x="82" y="56" width="86" height="8" rx="4" fill="#FDF0D5" opacity=".48"/>
+        <rect x="82" y="84" width="86" height="42" rx="8" fill="#174058"/>
+        <rect x="184" y="84" width="86" height="42" rx="8" fill="#174058"/>
+        <rect x="82" y="140" width="178" height="8" rx="4" fill="#0DB729"/>
+      </g>
+      <g transform="translate(0 606)">
+        <text x="0" y="0" class="kicker">Next sections</text>
+        <text x="0" y="26" class="small">Why it exists / UX decisions / screenshots / learning</text>
+      </g>
+      <use href="#bottom-nav" x="0" y="634" width="312" height="62"/>
+    </g>
+  </g>
+
+  <!-- Art gallery mobile -->
+  <g id="art-gallery-mobile" transform="translate(1390 80)">
+    <text x="0" y="-24" class="label">04 / Art Gallery</text>
+    <use href="#phone-shell" width="360" height="760"/>
+    <g class="screen" transform="translate(24 54)">
+      <use href="#mobile-top" width="312" height="48"/>
+      <text x="0" y="96" class="kicker">Sketchbook</text>
+      <text class="serif" font-size="31" font-weight="700">
+        <tspan x="0" y="134">Art, pattern, and</tspan>
+        <tspan x="0" y="170">quiet observation.</tspan>
+      </text>
+      <g transform="translate(0 212)">
+        <line x1="0" y1="0" x2="312" y2="0" class="line"/>
+        <text x="0" y="34" class="sans" font-size="13" font-weight="800">All</text>
+        <text x="58" y="34" class="small">Sketch</text>
+        <text x="130" y="34" class="small">Pattern</text>
+        <text x="224" y="34" class="small">Study</text>
+        <line x1="0" y1="54" x2="312" y2="54" class="line"/>
+      </g>
+      <g transform="translate(0 300)">
+        <rect class="surface shadow" x="0" y="0" width="146" height="164" rx="12"/>
+        <rect x="12" y="12" width="122" height="112" rx="9" fill="#F3DFD3"/>
+        <text x="12" y="146" class="serif" font-size="16" font-weight="700">Ink study</text>
+        <rect class="surface shadow" x="166" y="0" width="146" height="204" rx="12"/>
+        <rect x="178" y="12" width="122" height="150" rx="9" fill="#669BBC"/>
+        <text x="178" y="184" class="serif" font-size="16" font-weight="700">Blue rhythm</text>
+        <rect class="surface shadow" x="0" y="186" width="146" height="180" rx="12"/>
+        <rect x="12" y="198" width="122" height="128" rx="9" fill="#526828"/>
+        <text x="12" y="348" class="serif" font-size="16" font-weight="700">Leaf form</text>
+      </g>
+      <use href="#bottom-nav" x="0" y="634" width="312" height="62"/>
+    </g>
+  </g>
+
+  <!-- Single art mobile -->
+  <g id="single-art-mobile" transform="translate(70 960)">
+    <text x="0" y="-24" class="label">05 / Single Art</text>
+    <use href="#phone-shell" width="360" height="760"/>
+    <g class="screen" transform="translate(24 54)">
+      <use href="#mobile-top" width="312" height="48"/>
+      <text x="0" y="96" class="kicker">Sketchbook / Pattern note</text>
+      <text x="0" y="136" class="serif" font-size="31" font-weight="700">Blue rhythm study</text>
+      <g transform="translate(0 178)">
+        <rect class="surface shadow" x="0" y="0" width="312" height="360" rx="14"/>
+        <rect x="18" y="18" width="276" height="324" rx="11" fill="#669BBC"/>
+        <path d="M54 282 C96 80 152 308 202 120 S264 126 286 248" fill="none" stroke="#003049" stroke-width="12" stroke-linecap="round" opacity=".82"/>
+        <path d="M62 112 C124 236 184 72 266 230" fill="none" stroke="#FDF0D5" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+      </g>
+      <text class="body">
+        <tspan x="0" y="574">A short note about the piece, what</tspan>
+        <tspan x="0" y="594">I was observing, and its rhythm.</tspan>
+      </text>
+      <g transform="translate(0 616)">
+        <rect class="soft" x="0" y="0" width="120" height="42" rx="10"/>
+        <text x="60" y="27" class="sans" font-size="13" font-weight="800" text-anchor="middle">&lt;- Prev</text>
+        <rect x="192" y="0" width="120" height="42" rx="10" fill="#CC5500"/>
+        <text x="252" y="27" fill="#fff" class="sans" font-size="13" font-weight="800" text-anchor="middle">Next -></text>
+      </g>
+      <use href="#bottom-nav" x="0" y="634" width="312" height="62"/>
+    </g>
+  </g>
+
+  <!-- About mobile -->
+  <g id="about-mobile" transform="translate(510 960)">
+    <text x="0" y="-24" class="label">06 / About</text>
+    <use href="#phone-shell" width="360" height="760"/>
+    <g class="screen" transform="translate(24 54)">
+      <use href="#mobile-top" width="312" height="48"/>
+      <text x="0" y="96" class="kicker">About Brij</text>
+      <text class="serif" font-size="31" font-weight="700">
+        <tspan x="0" y="134">Product thinking,</tspan>
+        <tspan x="0" y="170">design craft, and</tspan>
+        <tspan x="0" y="206">technical clarity.</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="246">A thoughtful profile, not a dense</tspan>
+        <tspan x="0" y="266">resume layout.</tspan>
+      </text>
+      <g transform="translate(0 306)">
+        <rect class="terminal" x="0" y="0" width="312" height="82" rx="12"/>
+        <text x="14" y="28" class="terminalText"><tspan class="green">currently</tspan>: AI, product design</text>
+        <text x="14" y="52" class="terminalText">location: bengaluru, india</text>
+      </g>
+      <g transform="translate(0 420)">
+        <rect class="surface shadow" x="0" y="0" width="312" height="76" rx="12"/>
+        <text x="16" y="30" class="serif" font-size="20" font-weight="700">15+ years</text>
+        <text x="16" y="52" class="small">technical communication and product clarity</text>
+        <rect class="surface shadow" x="0" y="92" width="312" height="76" rx="12"/>
+        <text x="16" y="122" class="serif" font-size="20" font-weight="700">Design + Build</text>
+        <text x="16" y="144" class="small">UX, systems, prototypes, AI-assisted development</text>
+      </g>
+      <use href="#bottom-nav" x="0" y="634" width="312" height="62"/>
+    </g>
+  </g>
+
+  <!-- Admin mobile -->
+  <g id="admin-mobile" transform="translate(950 960)">
+    <text x="0" y="-24" class="label">07 / Mobile Admin</text>
+    <use href="#phone-shell" width="360" height="760"/>
+    <g class="screen" transform="translate(24 54)">
+      <use href="#mobile-top" width="312" height="48"/>
+      <text x="0" y="96" class="kicker">Local admin</text>
+      <text class="serif" font-size="31" font-weight="700">
+        <tspan x="0" y="134">Edit content</tspan>
+        <tspan x="0" y="170">without touching code.</tspan>
+      </text>
+      <text class="body">
+        <tspan x="0" y="204">Desktop is preferred, but mobile</tspan>
+        <tspan x="0" y="224">controls must remain touch-friendly.</tspan>
+      </text>
+      <g transform="translate(0 260)">
+        <rect class="surface shadow" x="0" y="0" width="146" height="92" rx="12"/>
+        <text x="16" y="34" class="serif" font-size="20" font-weight="700">Site</text>
+        <text x="16" y="58" class="small">Hero, shloka, links</text>
+        <rect class="surface shadow" x="166" y="0" width="146" height="92" rx="12"/>
+        <text x="182" y="34" class="serif" font-size="20" font-weight="700">Apps</text>
+        <text x="182" y="58" class="small">Stories, screenshots</text>
+        <rect class="surface shadow" x="0" y="112" width="146" height="92" rx="12"/>
+        <text x="16" y="146" class="serif" font-size="20" font-weight="700">Art</text>
+        <text x="16" y="170" class="small">Gallery content</text>
+        <rect class="surface shadow" x="166" y="112" width="146" height="92" rx="12"/>
+        <text x="182" y="146" class="serif" font-size="20" font-weight="700">Theme</text>
+        <g transform="translate(182 160)">
+          <rect x="0" y="0" width="16" height="16" rx="4" fill="#780000"/>
+          <rect x="22" y="0" width="16" height="16" rx="4" fill="#CC5500"/>
+          <rect x="44" y="0" width="16" height="16" rx="4" fill="#003049"/>
+          <rect x="66" y="0" width="16" height="16" rx="4" fill="#669BBC"/>
+        </g>
+      </g>
+      <g transform="translate(0 506)">
+        <rect class="terminal" x="0" y="0" width="312" height="58" rx="12"/>
+        <text x="14" y="24" class="terminalText"><tspan class="green">save</tspan>: folder API if supported</text>
+        <text x="14" y="44" class="terminalText">fallback: export JSON</text>
+      </g>
+      <use href="#bottom-nav" x="0" y="634" width="312" height="62"/>
+    </g>
+  </g>
+
+  <!-- Mobile requirements note -->
+  <g id="mobile-notes" transform="translate(70 1840)">
+    <rect class="terminal shadow" x="0" y="0" width="1660" height="220" rx="18"/>
+    <text x="28" y="42" class="terminalText" font-size="17"><tspan class="green">mobile-rules</tspan>:</text>
+    <text x="28" y="82" class="terminalText" font-size="15">1. The mobile site should feel like a polished personal app, not a squeezed desktop layout.</text>
+    <text x="28" y="116" class="terminalText" font-size="15">2. Bottom navigation is preferred for Home, Apps, Art, About, and Menu/Admin.</text>
+    <text x="28" y="150" class="terminalText" font-size="15">3. Terminal shloka must wrap safely for long Sanskrit/transliteration/translation text.</text>
+    <text x="28" y="184" class="terminalText" font-size="15">4. Apps page is a 1-column card library on mobile; desktop/tablet can use flexible masonry cards.</text>
+  </g>
+</svg>

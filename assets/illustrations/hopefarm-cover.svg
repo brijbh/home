@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="Gold security waveform on charcoal">
+  <rect width="760" height="420" fill="#17191b"/>
+  <g fill="none" stroke="#c8a555" opacity=".75"><path d="M0 326C109 176 191 175 304 326S514 478 760 120" stroke-width="4"/><path d="M0 357C110 226 203 222 312 348s215 157 448-78" stroke-width="2"/><path d="M0 281C103 108 218 111 326 272s217 195 434-10" stroke-width="1.5"/></g>
+  <path d="M381 102l86 32v73c0 63-34 102-86 127-52-25-86-64-86-127v-73z" fill="none" stroke="#efe4d0" stroke-width="8"/>
+  <path d="M381 142v146M333 194h96" stroke="#c8a555" stroke-width="7" stroke-linecap="round"/>
+</svg>

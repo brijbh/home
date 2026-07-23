@@ -1,0 +1,46 @@
+{
+  "id": "about",
+  "visible": true,
+  "featured": true,
+  "order": 1,
+  "eyebrow": "About Brij",
+  "heading": "I make complex ideas feel clear, useful, and human.",
+  "intro": "I am a product-minded designer with a foundation in technical communication. I move comfortably between product questions, UX flows, visual systems, words, and working prototypes.",
+  "story": [
+    "For more than fifteen years, I have worked where knowledge, systems, and people meet. Technical communication taught me to find the real question, understand unfamiliar systems quickly, and make complexity navigable.",
+    "Today I bring that same clarity into product design. I use code and AI-assisted development as thinking materials: a way to test behavior, uncover gaps, and carry an idea further than a static screen."
+  ],
+  "strengths": [
+    {
+      "id": "clarity",
+      "visible": true,
+      "featured": true,
+      "order": 1,
+      "title": "Product clarity",
+      "copy": "Frame the right problem and give teams a shared language."
+    },
+    {
+      "id": "craft",
+      "visible": true,
+      "featured": true,
+      "order": 2,
+      "title": "Design craft",
+      "copy": "Build calm, legible interfaces with strong content hierarchy."
+    },
+    {
+      "id": "systems",
+      "visible": true,
+      "featured": true,
+      "order": 3,
+      "title": "Technical fluency",
+      "copy": "Understand constraints, prototype behavior, and collaborate closely with engineering."
+    }
+  ],
+  "howIWork": [
+    "Start with the question, not the feature list.",
+    "Use writing and rough prototypes to make assumptions visible.",
+    "Design the system and the edge cases, not only the happy path.",
+    "Keep learning from the working thing."
+  ],
+  "experience": "15+ years across technical communication, information architecture, UX, product thinking, documentation systems, and independent digital experiments."
+}
