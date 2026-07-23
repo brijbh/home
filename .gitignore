@@ -1,2 +1,7 @@
 .server.log
 .server.err.log
+
+# Local-only content editor
+admin.html
+js/admin.js
+css/admin.css
