@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 126" role="img" aria-labelledby="title desc">
+  <title id="title">Brijesh was here</title>
+  <desc id="desc">A hand-scratched inscription inside an imperfect rectangular stamp.</desc>
+  <defs>
+    <filter id="rough" x="-8%" y="-12%" width="116%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency=".025 .12" numOctaves="2" seed="17" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <mask id="wear">
+      <rect width="240" height="126" fill="#fff"/>
+      <g fill="#000" opacity=".9">
+        <path d="M18 24h19v2H18zm54-8h11v2H72zm64 4h16v2h-16zm54 3h24v2h-24z"/>
+        <path d="M28 101h14v2H28zm47 7h22v2H75zm72-5h12v2h-12zm43 4h27v2h-27z"/>
+        <path d="M12 48h2v12h-2zm214-9h2v18h-2zm-1 38h2v13h-2z"/>
+        <path d="M45 48h8v2h-8zm51 13h12v2H96zm75-17h7v2h-7zm-117 36h11v2H54zm67 8h9v2h-9zm55-13h14v2h-14z"/>
+      </g>
+    </mask>
+  </defs>
+  <g fill="none" stroke="#c96a3d" stroke-linecap="round" stroke-linejoin="round"
+     mask="url(#wear)" filter="url(#rough)">
+    <path stroke-width="3.2" d="M13 13.5 226 10l2.5 101.5L10.5 115z"/>
+    <path stroke-width="1.1" opacity=".72" d="M18 19 220.5 16.5l1.5 89L17 109z"/>
+  </g>
+  <g fill="#c96a3d" mask="url(#wear)" filter="url(#rough)"
+     font-family="'Courier New',monospace" font-weight="400" text-anchor="middle">
+    <text x="120" y="61" font-size="29" letter-spacing="4">BRIJESH</text>
+    <text x="120" y="91" font-size="24" letter-spacing="3.5">WAS HERE</text>
+  </g>
+</svg>

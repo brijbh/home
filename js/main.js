@@ -32,9 +32,10 @@
     if (page === "home") document.title = `${site.name || "Git Home"} — ${site.fullName || "Brijesh Bhaskaran"}`;
   }
   function renderFooter(site) {
+    const q=site.shloka||{};
     document.querySelectorAll("[data-footer]").forEach((root) => {
       root.classList.add("compact-footer");
-      root.innerHTML=`<div><strong>brij@home</strong>:~$ open <a href="${base}app-pages/app.html">--work</a> <a href="${base}art-pages/index.html">--art</a> <a href="${base}about.html">--about</a> <span class="cursor"></span></div><div>Concept, UX, design, and AI-assisted build by Brij.</div>`;
+      root.innerHTML=`<div class="footer-nav"><strong>brij@home</strong>:~$ open <a href="${base}app-pages/app.html">--work</a> <a href="${base}art-pages/index.html">--art</a> <a href="${base}about.html">--about</a> <span class="cursor"></span></div><div class="footer-shloka"><span class="footer-shloka-command"><strong>shloka</strong>:~$ ${esc(q.sanskrit)}</span><span>${esc(q.transliteration)}</span></div><div class="footer-credit">Concept, UX, design, and AI-assisted build by Brij.</div>`;
     });
   }
   function renderHome(site, apps, artwork) {
@@ -73,8 +74,82 @@
     const update=()=>{const current=ordered.find(x=>x.id===decodeURIComponent(location.hash.slice(1)));gallery.hidden=!!current;intro.hidden=!!current;detail.hidden=!current;if(!current)return;const i=ordered.indexOf(current);text("[data-art-title]",current.title);text("[data-art-description]",current.description);text("[data-art-meta]",`${current.medium} / ${current.year}`);attr("[data-art-image]","src",asset(current.image));attr("[data-art-image]","alt",current.alt);html("[data-art-tags]",(current.tags||[]).map(t=>`<span>${esc(t)}</span>`).join(""));artNav("[data-prev-art]",ordered[(i-1+ordered.length)%ordered.length],"← ");artNav("[data-next-art]",ordered[(i+1)%ordered.length],""," →");scrollTo({top:0,behavior:"instant"});};addEventListener("hashchange",update);update();
   }
   function renderAbout(a,site) {
-    const strengths=visible(a.strengths).map(x=>`<article class="strength"><p class="eyebrow">0${x.order}</p><h3>${esc(x.title)}</h3><p>${esc(x.copy)}</p></article>`).join("");
-    document.querySelector("[data-about]").innerHTML=`<section class="about-intro"><p class="eyebrow">${esc(a.eyebrow)}</p><h1>${esc(a.heading)}</h1><p class="lede">${esc(a.intro)}</p></section><section class="about-story"><h2>From explaining systems to shaping products.</h2><div class="story-text">${a.story.map(x=>`<p>${esc(x)}</p>`).join("")}</div></section><section><p class="eyebrow">Strengths</p><div class="strength-grid">${strengths}</div></section><section class="work-grid"><div><p class="eyebrow">How I work</p><h2>Clarity is a process.</h2><p>${esc(a.experience)}</p></div><ol>${a.howIWork.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></section><div class="terminal profile-terminal"><strong>brij@home:~$</strong> currently<br>exploring: ${esc(site.footer.currently)}<br>location: ${esc(site.footer.location)} <span class="cursor"></span></div><section><p class="eyebrow">Connect</p><h2>Let’s compare notes.</h2><div class="contact-row"><a class="button" href="${esc(site.social.email)}">Email me</a><a class="button ghost" href="${esc(site.social.linkedin)}">LinkedIn ↗</a><a class="button ghost" href="${esc(site.social.github)}">GitHub ↗</a></div></section>`;
+    const facts=(a.facts||[]).map(x=>`<div><strong>${esc(x.value)}</strong><span>${esc(x.label)}</span></div>`).join("");
+    const capabilities=(a.capabilities||[]).sort((x,y)=>(x.order||0)-(y.order||0)).map((x,i)=>`<article class="about-capability"><span>0${i+1}</span><h3>${esc(x.title)}</h3><p>${esc(x.copy)}</p></article>`).join("");
+    const domains=(a.domains||[]).map((x,i)=>`<article class="domain-card" style="--i:${i}"><span>${String(i+1).padStart(2,"0")}</span><h3>${esc(x.name)}</h3><p>${esc(x.detail)}</p></article>`).join("");
+    const companyMarks=(a.companyMarks||[]).map((x,i)=>`<figure class="career-mark career-mark-${i+1}" style="--i:${i}"><svg viewBox="${esc(x.viewBox)}" role="img" aria-label="${esc(x.name)}"><image href="assets/icons/corporate-icons.svg" width="303.99" height="471.79"></image></svg><figcaption>${esc(x.name)}</figcaption></figure>`).join("");
+    const career=(a.career||[]).map(x=>`<li><time>${esc(x.period)}</time><div class="career-company"><h3>${esc(x.company)}</h3><p class="career-role">${esc(x.role)}</p></div><div class="career-detail"><p class="career-note">${esc(x.note)}</p><p class="career-work">${esc(x.work)}</p></div></li>`).join("");
+    const process=(a.process||[]).map(x=>`<li><span>${esc(x.number)}</span><div><h3>${esc(x.title)}</h3><p>${esc(x.copy)}</p></div></li>`).join("");
+    const independentProducts=(a.independentProducts||[]).map(x=>`<a class="bridge-product-link" href="${esc(externalUrl(x.url))}">${esc(x.name)}</a>`).join(", ");
+    const workbench=(a.workbench||[]).map((group,i)=>`<article class="workbench-group" style="--i:${i}"><div class="workbench-group-head"><span>${String(i+1).padStart(2,"0")}</span><div><h3>${esc(group.title)}</h3><p>${esc(group.copy)}</p></div></div><ul>${(group.tools||[]).map(tool=>`<li>${tool.icon?`<img src="${esc(tool.icon)}" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="tool-mark" hidden>${esc(tool.mark)}</span>`:`<span class="tool-mark">${esc(tool.mark)}</span>`}<span>${esc(tool.name)}</span></li>`).join("")}</ul></article>`).join("");
+    const craft=(a.craft||[]).map(x=>`<li><span aria-hidden="true">${esc(x.mark)}</span><div><h4>${esc(x.name)}</h4><p>${esc(x.detail)}</p></div></li>`).join("");
+    document.querySelector("[data-about]").innerHTML=`
+      <section class="about-hero reveal" id="profile">
+        <p class="eyebrow">${esc(a.eyebrow)}</p>
+        <h1>${productHeading(a.heading)}</h1>
+        <div class="about-hero-copy"><p>${esc(a.intro)}</p><div>${(a.positioning||[]).map(x=>`<p>${esc(x)}</p>`).join("")}</div></div>
+        <div class="about-facts">${facts}</div>
+      </section>
+      <nav class="about-index" aria-label="About page sections">
+        <button class="about-index-toggle" type="button" aria-expanded="false" aria-controls="about-index-links"><span><b data-index-current>Profile</b><small data-index-context>Who I am</small></span><span>Sections <i aria-hidden="true">+</i></span></button>
+        <div class="about-index-links" id="about-index-links">
+          <a href="#profile"><b>Profile</b><span>Who I am</span></a>
+          <a href="#practice"><b>Practice</b><span>What &amp; how</span></a>
+          <a href="#domains"><b>Domains</b><span>Industries</span></a>
+          <a href="#career"><b>Career</b><span>Where I’ve worked</span></a>
+          <a href="#workbench"><b>Workbench</b><span>Tools I use</span></a>
+          <a href="#outlook"><b>Outlook</b><span>My Happy Place</span></a>
+        </div>
+      </nav>
+      <section class="about-practice reveal" id="practice">
+        <div class="about-section-head"><p class="eyebrow">My practice</p><h2>${esc(a.practiceHeading||"What I do and how I work.")}</h2></div>
+        <div class="practice-bridge"><h3>${esc(a.bridgeHeading)}</h3><div class="bridge-copy">${(a.bridge||[]).map(x=>`<p>${esc(x)}</p>`).join("")}<p>My independent products—${independentProducts}—are where I test that approach end to end: question, structure, interface, prototype, and revision.</p></div></div>
+        <div class="practice-capabilities"><p class="eyebrow">What I actually do</p><h3>${esc(a.capabilityHeading||"From a vague problem to a useful direction.")}</h3><div class="capability-grid">${capabilities}</div></div>
+        <div class="practice-process"><div><p class="eyebrow">Working method</p><h3>${esc(a.processHeading)}</h3></div><ol>${process}</ol></div>
+      </section>
+      <section class="about-domains reveal" id="domains">
+        <div class="about-section-head"><p class="eyebrow">Industries and technologies</p><div><h2>${esc(a.domainsHeading)}</h2><p>${esc(a.domainsIntro)}</p></div></div>
+        <div class="domain-grid">${domains}</div>
+      </section>
+      <section class="career-section reveal" id="career">
+        <div class="career-heading"><div><p class="eyebrow">Brijesh was here</p><h2>${esc(a.careerHeading)}</h2><p>${esc(a.careerIntro)}</p></div><img class="career-stamp" src="assets/images/bbwashere.svg" alt="" aria-hidden="true"></div>
+        <div class="career-mark-field" aria-label="Companies from Brijesh's career">${companyMarks}</div>
+        <div class="career-layout">
+          <ol class="career-timeline">${career}</ol>
+        </div>
+      </section>
+      <section class="about-workbench reveal" id="workbench">
+        <div class="about-section-head"><p class="eyebrow">Tools and technologies</p><div><h2>${esc(a.workbenchHeading)}</h2><p>${esc(a.workbenchIntro)}</p></div></div>
+        <div class="workbench-grid">${workbench}<article class="workbench-group craft-workbench"><div class="craft-workbench-head"><span>Making by hand</span><h3>${esc(a.craftHeading)}</h3><p>${esc(a.craftIntro)}</p></div><ul>${craft}</ul></article></div>
+      </section>
+      <section class="about-pitch reveal" id="outlook">
+        <p class="eyebrow">A note about the future</p>
+        <h2>${esc(a.pitchHeading)}</h2>
+        <p class="pitch-main">${esc(a.pitch)}</p>
+        <p>${esc(a.pitchSupport)}</p>
+        <div class="contact-row"><a class="button" href="${esc(site.social.email)}">Start a conversation</a><a class="button ghost" href="${esc(site.social.linkedin)}">LinkedIn ↗</a><a class="button ghost" href="app-pages/app.html">See the work →</a></div>
+      </section>`;
+    setupAboutIndex();
+    function productHeading(value) {
+      const heading=String(value||""),term="products",index=heading.toLowerCase().lastIndexOf(term);
+      if(index<0)return esc(heading);
+      return `${esc(heading.slice(0,index))}<a class="about-product-link" href="app-pages/app.html">${esc(heading.slice(index,index+term.length))}</a>${esc(heading.slice(index+term.length))}`;
+    }
+    function setupAboutIndex() {
+      const nav=document.querySelector(".about-index"), toggle=nav?.querySelector(".about-index-toggle"), links=[...document.querySelectorAll(".about-index a")], sections=links.map(x=>document.querySelector(x.hash)).filter(Boolean);
+      const activate=(id)=>{
+        links.forEach(x=>x.classList.toggle("active",x.hash===`#${id}`));
+        const active=links.find(x=>x.hash===`#${id}`);
+        if(active){text("[data-index-current]",active.querySelector("b")?.textContent);text("[data-index-context]",active.querySelector("span")?.textContent)}
+      };
+      activate("profile");
+      toggle?.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));});
+      links.forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");toggle?.setAttribute("aria-expanded","false")}));
+      document.addEventListener("click",event=>{if(nav&&!nav.contains(event.target)){nav.classList.remove("open");toggle?.setAttribute("aria-expanded","false")}});
+      document.addEventListener("keydown",event=>{if(event.key==="Escape"){nav?.classList.remove("open");toggle?.setAttribute("aria-expanded","false")}});
+      const observer=new IntersectionObserver(entries=>entries.forEach(entry=>entry.isIntersecting&&activate(entry.target.id)),{rootMargin:"-22% 0px -68%",threshold:0});
+      sections.forEach(section=>observer.observe(section));
+    }
   }
   function setupReveals(motion) {const nodes=document.querySelectorAll(".reveal");if(!motion?.enabled||!motion?.sectionReveal||matchMedia("(prefers-reduced-motion: reduce)").matches){nodes.forEach(n=>n.classList.add("visible"));return}const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.08});nodes.forEach(n=>io.observe(n));}
   function text(s,v){const n=document.querySelector(s);if(n)n.textContent=v||""} function html(s,v){const n=document.querySelector(s);if(n)n.innerHTML=v||""} function attr(s,k,v){document.querySelector(s)?.setAttribute(k,v||"")}
