@@ -99,5 +99,36 @@
     "tags": [
       "botanical"
     ]
+  },
+  {
+    "id": "flower-lines",
+    "visible": true,
+    "featured": false,
+    "order": 7,
+    "title": "Flower and Lines",
+    "year": "2024",
+    "medium": "Pen and Crayons",
+    "thumbnail": "assets/illustrations/pen-and-crayon-doodle.jpg",
+    "image": "assets/illustrations/pen-and-crayon-doodle.jpg",
+    "alt": "An abstract created with pen and crayons.",
+    "description": "An abstract created with pen and crayons.",
+    "tags": [
+      "pen",
+      "doodle"
+    ]
+  },
+  {
+    "id": "new-art-8",
+    "visible": true,
+    "featured": false,
+    "order": 8,
+    "title": "New artwork",
+    "year": 2026,
+    "medium": "Digital study",
+    "thumbnail": "assets/illustrations/art-abstract.svg",
+    "image": "assets/illustrations/art-abstract.svg",
+    "alt": "Describe this artwork",
+    "description": "Artwork note.",
+    "tags": []
   }
 ]

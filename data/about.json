@@ -3,304 +3,44 @@
   "visible": true,
   "featured": true,
   "order": 1,
-  "eyebrow": "Product designer / information architect / solution thinker",
-  "heading": "From explaining systems to shaping products.",
-  "intro": "My career began with information: learning unfamiliar technology, finding its underlying logic, and explaining it without losing the important parts. That work gradually moved upstream—from documenting finished systems to questioning, structuring, designing, and prototyping the product itself.",
-  "positioning": [
-    "I am useful when the problem is still unclear, the system has too many moving parts, or a team needs a practical way forward.",
-    "I work across product framing, information architecture, UX, interface design, content, and working prototypes. I use code and AI-assisted development to test ideas early—not to decorate a finished answer."
+  "eyebrow": "About Brij",
+  "heading": "I make complex ideas feel clear, useful, and human.",
+  "intro": "I am a product-minded designer with a foundation in technical communication. I move comfortably between product questions, UX flows, visual systems, words, and working prototypes.",
+  "story": [
+    "For more than fifteen years, I have worked where knowledge, systems, and people meet. Technical communication taught me to find the real question, understand unfamiliar systems quickly, and make complexity navigable.",
+    "Today I bring that same clarity into product design. I use code and AI-assisted development as thinking materials: a way to test behavior, uncover gaps, and carry an idea further than a static screen."
   ],
-  "facts": [
+  "strengths": [
     {
-      "value": "25+",
-      "label": "years learning complex products"
-    },
-    {
-      "value": "7",
-      "label": "product organisations"
-    },
-    {
-      "value": "1",
-      "label": "bias: make it understandable"
-    }
-  ],
-  "capabilities": [
-    {
-      "id": "frame",
+      "id": "clarity",
+      "visible": true,
+      "featured": true,
       "order": 1,
-      "title": "Frame the problem",
-      "copy": "Separate the real user or business problem from the requested feature. Turn ambiguity into a question the team can act on."
+      "title": "Product clarity",
+      "copy": "Frame the right problem and give teams a shared language."
     },
     {
-      "id": "map",
+      "id": "craft",
+      "visible": true,
+      "featured": true,
       "order": 2,
-      "title": "Map the system",
-      "copy": "Understand actors, information, dependencies, edge cases, and constraints before deciding what the interface should do."
+      "title": "Design craft",
+      "copy": "Build calm, legible interfaces with strong content hierarchy."
     },
     {
-      "id": "design",
+      "id": "systems",
+      "visible": true,
+      "featured": true,
       "order": 3,
-      "title": "Design the experience",
-      "copy": "Create flows, content structures, interaction patterns, and visual hierarchy that reduce effort without hiding necessary complexity."
-    },
-    {
-      "id": "build",
-      "order": 4,
-      "title": "Make it testable",
-      "copy": "Use prototypes, code, and AI-assisted development to expose weak assumptions and move a useful idea closer to reality."
+      "title": "Technical fluency",
+      "copy": "Understand constraints, prototype behavior, and collaborate closely with engineering."
     }
   ],
-  "practiceHeading": "What I do and how I work.",
-  "capabilityHeading": "From a vague problem to a useful direction.",
-  "domainsHeading": "The domains changed. The habit stayed useful.",
-  "domainsIntro": "Each industry came with a different vocabulary, architecture, and risk profile. The work was to learn the system quickly, understand what mattered to the people using it, and give the complexity a usable structure.",
-  "domains": [
-    {
-      "name": "Internet payment systems",
-      "detail": "Transactions, payment devices, reliability, and information that has to be correct."
-    },
-    {
-      "name": "Supply chain management",
-      "detail": "Planning systems, dependencies, enterprise workflows, and decisions across moving parts."
-    },
-    {
-      "name": "Web services and cloud platforms",
-      "detail": "APIs, service models, operational concepts, and products designed to work at scale."
-    },
-    {
-      "name": "Wireless networking",
-      "detail": "Network configuration, infrastructure behaviour, administration, and troubleshooting flows."
-    },
-    {
-      "name": "Storage and data infrastructure",
-      "detail": "Systems where architecture, terminology, and the sequence of operations matter."
-    },
-    {
-      "name": "Cybersecurity and cloud security",
-      "detail": "Dense technical models, risk, policy, visibility, and decisions that need clear context."
-    },
-    {
-      "name": "AI-assisted product tools",
-      "detail": "Prompt workflows, evaluation, prototyping, and learning what should—and should not—be automated."
-    }
+  "howIWork": [
+    "Start with the question, not the feature list.",
+    "Use writing and rough prototypes to make assumptions visible.",
+    "Design the system and the edge cases, not only the happy path.",
+    "Keep learning from the working thing."
   ],
-  "companyMarks": [
-    {
-      "name": "Cisco Systems",
-      "viewBox": "8 0 122 64"
-    },
-    {
-      "name": "Meru Networks",
-      "viewBox": "184 8 120 62"
-    },
-    {
-      "name": "i2",
-      "viewBox": "8 98 122 98"
-    },
-    {
-      "name": "Netskope",
-      "viewBox": "184 112 120 68"
-    },
-    {
-      "name": "NetApp",
-      "viewBox": "0 214 116 84"
-    },
-    {
-      "name": "VeriFone",
-      "viewBox": "184 216 120 52"
-    },
-    {
-      "name": "Fortinet",
-      "viewBox": "184 292 120 34"
-    },
-    {
-      "name": "Aruba",
-      "viewBox": "0 336 126 50"
-    },
-    {
-      "name": "Amazon",
-      "viewBox": "0 426 126 46"
-    }
-  ],
-  "careerHeading": "Systems I learned from.",
-  "careerIntro": "The job titles changed. The recurring work did not: understand a technical system, find the structure inside it, and help other people use it with less friction.",
-  "career": [
-    {
-      "period": "1997—2000",
-      "company": "VeriFone",
-      "role": "Information Designer",
-      "note": "Where information first became a designed interface between people and technology.",
-      "work": "Developed API guides and technical reference manuals, and participated in UX testing for payment terminals."
-    },
-    {
-      "period": "2000—2003",
-      "company": "Cisco Systems",
-      "role": "Technical Writer",
-      "note": "Large networked systems, technical depth, and the discipline of making precision readable.",
-      "work": "Developed user guides and release notes, and participated in local UX initiatives."
-    },
-    {
-      "period": "2003—2005",
-      "company": "NetApp",
-      "role": "Lead Technical Writer",
-      "note": "Caching products, information architecture, and ownership beyond the individual document.",
-      "work": "Led the local writing team, developed user guides, and contributed to improvements in the network-management system WebUI."
-    },
-    {
-      "period": "2005—2007",
-      "company": "Amazon",
-      "role": "Technical Writer",
-      "note": "Customer-first thinking inside products and operations built to work at scale.",
-      "work": "Developed API documentation and proof-of-concept demos for payment workflow solutions."
-    },
-    {
-      "period": "2007—2012",
-      "company": "Aruba Networks",
-      "role": "Technical Publications Manager",
-      "note": "Team leadership, publication systems, and wireless products used across organisations.",
-      "work": "Built the publications team, independently designed a product from the ground up, and helped improve the network-management system WebUI."
-    },
-    {
-      "period": "2013—2017",
-      "company": "Meru Networks",
-      "role": "Manager / Individual Contributor",
-      "note": "A working balance between leading people, shaping systems, and staying close to the craft.",
-      "work": "Managed the team, developed and maintained the software and hardware guides, and built a Bugzilla-based release-notes generator."
-    },
-    {
-      "period": "2017—Now",
-      "company": "Netskope",
-      "role": "Senior Staff Writer",
-      "note": "Cloud-security complexity, global collaboration, and information architecture at product scale.",
-      "work": "Develop technical documentation, administer WordPress, and build AI-assisted plugins, skills, and agents for the team."
-    }
-  ],
-  "bridgeHeading": "What the job titles do not show.",
-  "bridge": [
-    "Technical communication is often treated as work that begins after the product decisions are made. In practice, doing it well requires product thinking: reconstructing the user’s goal, questioning the sequence, finding missing states, naming concepts, and deciding what should be visible when.",
-    "That is the bridge to my product-design work. I did not leave systems thinking behind to become a designer; I brought it with me. The difference is that I now use those skills earlier, while the experience can still be changed."
-  ],
-  "independentProducts": [
-    {
-      "name": "Hoodi",
-      "url": "#"
-    },
-    {
-      "name": "Ulsoor",
-      "url": "#"
-    },
-    {
-      "name": "Domlur",
-      "url": "#"
-    },
-    {
-      "name": "Whitefield",
-      "url": "#"
-    }
-  ],
-  "processHeading": "Clarity is a process.",
-  "process": [
-    {
-      "number": "01",
-      "title": "Ask what changed",
-      "copy": "Why is this problem important now? Who feels it, and what are they doing today?"
-    },
-    {
-      "number": "02",
-      "title": "Make the invisible visible",
-      "copy": "Write the model down. Map the actors, decisions, information, constraints, and uncomfortable edge cases."
-    },
-    {
-      "number": "03",
-      "title": "Reduce without oversimplifying",
-      "copy": "Remove avoidable work and noise while keeping the detail people need to make a correct decision."
-    },
-    {
-      "number": "04",
-      "title": "Build enough to learn",
-      "copy": "A working prototype answers questions that a polished static screen can hide."
-    },
-    {
-      "number": "05",
-      "title": "Listen to the working thing",
-      "copy": "Use what breaks, confuses, or slows people down as input for the next version."
-    }
-  ],
-  "workbenchHeading": "My Workbench",
-  "workbenchIntro": "Different tools for different stages—understanding the problem, shaping an idea, making it tangible, and keeping the information useful.",
-  "workbench": [
-    {
-      "title": "Shape the Idea",
-      "copy": "Interface design, visual exploration, product flows, image-making, and spatial concepts.",
-      "tools": [
-        { "name": "Figma", "mark": "Fi", "icon": "https://cdn.simpleicons.org/figma/103d4b" },
-        { "name": "Illustrator", "mark": "Ai", "icon": "" },
-        { "name": "Photoshop", "mark": "Ps", "icon": "" },
-        { "name": "SketchUp 3D", "mark": "Su", "icon": "https://cdn.simpleicons.org/sketchup/103d4b" },
-        { "name": "Claude Design", "mark": "Cl", "icon": "https://cdn.simpleicons.org/anthropic/103d4b" }
-      ]
-    },
-    {
-      "title": "Organise the Work",
-      "copy": "Product planning, requirements, collaborative thinking, issue tracking, and release workflows.",
-      "tools": [
-        { "name": "Notion", "mark": "No", "icon": "https://cdn.simpleicons.org/notion/103d4b" },
-        { "name": "Aha!", "mark": "Ah", "icon": "" },
-        { "name": "Jira", "mark": "Ji", "icon": "https://cdn.simpleicons.org/jira/103d4b" },
-        { "name": "Bugzilla", "mark": "Bz", "icon": "" }
-      ]
-    },
-    {
-      "title": "Build and Publish",
-      "copy": "Working prototypes, content structures, version control, and deployment. I work directly with HTML and CSS, and can read, review, and adapt JavaScript with AI assistance.",
-      "tools": [
-        { "name": "HTML", "mark": "H5", "icon": "https://cdn.simpleicons.org/html5/103d4b" },
-        { "name": "CSS", "mark": "C3", "icon": "https://cdn.simpleicons.org/css/103d4b" },
-        { "name": "JavaScript", "mark": "JS", "icon": "https://cdn.simpleicons.org/javascript/103d4b" },
-        { "name": "JSON", "mark": "{ }", "icon": "https://cdn.simpleicons.org/json/103d4b" },
-        { "name": "Git", "mark": "Gi", "icon": "https://cdn.simpleicons.org/git/103d4b" },
-        { "name": "GitHub", "mark": "GH", "icon": "https://cdn.simpleicons.org/github/103d4b" },
-        { "name": "Vercel", "mark": "▲", "icon": "https://cdn.simpleicons.org/vercel/103d4b" }
-      ]
-    },
-    {
-      "title": "Structure the Information",
-      "copy": "Technical authoring, structured content, publishing systems, documentation sites, and content administration.",
-      "tools": [
-        { "name": "FrameMaker", "mark": "Fm", "icon": "" },
-        { "name": "Paligo", "mark": "Pa", "icon": "" },
-        { "name": "MadCap Flare", "mark": "Mf", "icon": "" },
-        { "name": "WordPress", "mark": "Wp", "icon": "https://cdn.simpleicons.org/wordpress/103d4b" },
-        { "name": "Oxygen XML Editor", "mark": "Ox", "icon": "" },
-        { "name": "XMetaL", "mark": "Xm", "icon": "" },
-        { "name": "DITA", "mark": "Di", "icon": "" },
-        { "name": "XML", "mark": "Xm", "icon": "https://cdn.simpleicons.org/xml/103d4b" },
-        { "name": "Markdown", "mark": "Md", "icon": "https://cdn.simpleicons.org/markdown/103d4b" }
-      ]
-    },
-    {
-      "title": "Think With AI",
-      "copy": "Exploration, prototyping, local-model experiments, workflow automation, and the development of plugins, skills, and agents.",
-      "tools": [
-        { "name": "Claude Code", "mark": "Cl", "icon": "https://cdn.simpleicons.org/anthropic/103d4b" },
-        { "name": "Gemini", "mark": "Ge", "icon": "https://cdn.simpleicons.org/googlegemini/103d4b" },
-        { "name": "ChatGPT", "mark": "GP", "icon": "" },
-        { "name": "Codex", "mark": "Cx", "icon": "" },
-        { "name": "Ollama", "mark": "Ol", "icon": "https://cdn.simpleicons.org/ollama/103d4b" }
-      ]
-    }
-  ],
-  "craftHeading": "Beyond the Screen",
-  "craftIntro": "Physical making keeps a different part of the design process active: material, proportion, patience, and the feedback that comes from working with your hands.",
-  "craft": [
-    { "name": "Woodworking", "mark": "⌁", "detail": "Hand and power tools" },
-    { "name": "Epoxy resin", "mark": "◌", "detail": "Casting, composition, and finishing" },
-    { "name": "Arduino prototyping", "mark": "⚡", "detail": "Small physical and interactive experiments" },
-    { "name": "Doodling", "mark": "✎", "detail": "Drawing without needing a brief" },
-    { "name": "Kerala mural painting", "mark": "❖", "detail": "Pattern, colour, and traditional visual forms" }
-  ],
-  "pitchHeading": "My Happy Place",
-  "pitch": "A space where product and solution design engage with complex domains—not as an inconvenience, but as the substance of the work. Where I can contribute from early framing through to a testable product direction.",
-  "pitchSupport": "I’m happiest alongside my cross-functional buddies in product and engineering—people who value clear questions, direct collaboration, thoughtful detail, and evidence over theatre.",
-  "experience": "25+ years across information design, technical communication, publication leadership, information architecture, UX, product thinking, and independent digital products."
+  "experience": "15+ years across technical communication, information architecture, UX, product thinking, documentation systems, and independent digital experiments."
 }
