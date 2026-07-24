@@ -101,20 +101,22 @@
     ]
   },
   {
-    "id": "flower-lines",
+    "id": "bw-pen-doodle",
     "visible": true,
     "featured": false,
     "order": 7,
-    "title": "Flower and Lines",
+    "title": "Black and White Pen Doodle Abstract",
     "year": "2024",
-    "medium": "Pen and Crayons",
-    "thumbnail": "assets/illustrations/pen-and-crayon-doodle.jpg",
-    "image": "assets/illustrations/pen-and-crayon-doodle.jpg",
-    "alt": "An abstract created with pen and crayons.",
-    "description": "An abstract created with pen and crayons.",
+    "medium": "Pen",
+    "thumbnail": "assets/illustrations/pen-lines-doodle-bw.jpg",
+    "image": "assets/illustrations/pen-lines-doodle-bw.jpg",
+    "alt": "Black and White Pen Doodle Abstract",
+    "description": "Black and White Pen Doodle Abstract",
     "tags": [
       "pen",
-      "doodle"
+      "doodle",
+      "black and white",
+      "abstract"
     ]
   },
   {
