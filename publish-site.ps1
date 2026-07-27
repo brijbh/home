@@ -51,6 +51,16 @@ Get-ChildItem -LiteralPath (Join-Path $projectRoot "data") -Filter "*.json" |
         }
     }
 
+$aboutPath = Join-Path $projectRoot "data\about.json"
+$aboutData = Get-Content -LiteralPath $aboutPath -Raw | ConvertFrom-Json
+$requiredAboutArrays = @("capabilities", "domains", "career", "independentProducts", "process", "workbench", "craft")
+foreach ($property in $requiredAboutArrays) {
+    $value = $aboutData.PSObject.Properties[$property].Value
+    if ($null -eq $value -or $value.Count -eq 0) {
+        throw "About data is incomplete: '$property' is missing or empty. Publishing stopped to prevent blank About sections."
+    }
+}
+
 Write-Host "`nChecking GitHub for newer commits..." -ForegroundColor Cyan
 Invoke-CheckedCommand -Executable "git" -Arguments @("fetch", "origin", "main")
 

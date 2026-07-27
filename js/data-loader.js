@@ -14,7 +14,8 @@
       if (new URLSearchParams(location.search).get("preview") === "draft") {
         const draft = localStorage.getItem(`git-home-draft-${name}`);
         if (draft) {
-          cache[base + name] = JSON.parse(draft);
+          const parsed = JSON.parse(draft);
+          cache[base + name] = parsed && parsed.data ? parsed.data : parsed;
           return cache[base + name];
         }
       }
