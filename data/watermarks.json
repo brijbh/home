@@ -1,0 +1,41 @@
+{
+  "enabled": true,
+  "dailyRotation": true,
+  "timezone": "Asia/Kolkata",
+  "maxPerPage": 2,
+  "mobileMaxPerPage": 1,
+  "items": [
+    {
+      "id": "kolam1",
+      "name": "kolam1",
+      "image": "assets/watermarks/kolam-01.svg",
+      "source": "",
+      "pages": [
+        "home"
+      ],
+      "placement": "bottom-right",
+      "opacity": 0.08,
+      "size": "medium",
+      "rotation": 0,
+      "showOnMobile": false,
+      "visible": true,
+      "order": 1
+    },
+    {
+      "id": "watermark-2",
+      "name": "New watermark",
+      "image": "assets/watermarks/your-artifact.svg",
+      "source": "",
+      "pages": [
+        "home"
+      ],
+      "placement": "bottom-right",
+      "opacity": 0.08,
+      "size": "medium",
+      "rotation": 0,
+      "showOnMobile": false,
+      "visible": false,
+      "order": 2
+    }
+  ]
+}

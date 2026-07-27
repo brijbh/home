@@ -6,15 +6,19 @@
   const visible = (items) => (items || []).filter((item) => item.visible !== false).sort((a,b) => (a.order || 0) - (b.order || 0));
   const asset = (path) => path ? `${base}${path}` : "";
   try {
-    const [site, apps, artwork, about] = await Promise.all([
+    const [site, apps, artwork, about, quotes, watermarks] = await Promise.all([
       GitHomeData.loadFrom(base,"site"), GitHomeData.loadFrom(base,"apps"),
-      GitHomeData.loadFrom(base,"artwork"), GitHomeData.loadFrom(base,"about").catch(() => null)
+      GitHomeData.loadFrom(base,"artwork"), GitHomeData.loadFrom(base,"about").catch(() => null),
+      GitHomeData.loadFrom(base,"quotes").catch(() => []),
+      GitHomeData.loadFrom(base,"watermarks").catch(() => ({enabled:false,items:[]}))
     ]);
-    applyTheme(site); renderSiteIdentity(site); renderFooter(site);
-    if (page === "home") renderHome(site, apps, artwork);
+    const dailyQuote=selectSiteQuote(site,quotes);
+    applyTheme(site); renderSiteIdentity(site); renderFooter(site,dailyQuote);
+    if (page === "home") renderHome(site, apps, artwork,dailyQuote);
     if (page === "apps") renderApps(apps);
     if (page === "art") renderArt(artwork);
     if (page === "about" && about) renderAbout(about, site);
+    renderWatermarks(watermarks);
     setupReveals(site.motion);
   } catch (error) {
     console.error(error);
@@ -31,16 +35,15 @@
     document.querySelectorAll("[data-site-name]").forEach(node => node.textContent = site.name || "Git Home");
     if (page === "home") document.title = `${site.name || "Git Home"} — ${site.fullName || "Brijesh Bhaskaran"}`;
   }
-  function renderFooter(site) {
-    const q=site.shloka||{};
+  function renderFooter(site,q) {
     document.querySelectorAll("[data-footer]").forEach((root) => {
       root.classList.add("compact-footer");
       root.innerHTML=`<div class="footer-nav"><strong>brij@home</strong>:~$ open <a href="${base}app-pages/app.html">--work</a> <a href="${base}art-pages/index.html">--art</a> <a href="${base}about.html">--about</a> <span class="cursor"></span></div><div class="footer-shloka"><span class="footer-shloka-command"><strong>shloka</strong>:~$ ${esc(q.sanskrit)}</span><span>${esc(q.transliteration)}</span></div><div class="footer-credit">Concept, UX, design, and AI-assisted build by Brij.</div>`;
     });
   }
-  function renderHome(site, apps, artwork) {
+  function renderHome(site, apps, artwork,q) {
     text("[data-eyebrow]",site.eyebrow); text("[data-hero-heading]",site.heroHeading); text("[data-hero-supporting]",site.heroSupporting);
-    const q=site.shloka||{}; html("[data-shloka]",`<div class="terminal-dots"><i></i><i></i><i></i></div><div class="terminal-command"><span class="prompt">brij@home</span>:~$ ${esc(q.sanskrit)} <span class="terminal-translit">${esc(q.transliteration)}</span><span class="cursor"></span></div>`);
+    html("[data-shloka]",`<div class="terminal-dots"><i></i><i></i><i></i></div><div class="terminal-command"><span class="prompt">brij@home</span>:~$ ${esc(q.sanskrit)} <span class="terminal-translit">${esc(q.transliteration)}</span><span class="cursor"></span></div>`);
     html("[data-page-links]",visible(site.pageLinks).map(x=>`<a class="page-link" href="${esc(x.href)}"><b>${esc(x.label)}</b></a>`).join(""));
     html("[data-models]",visible(site.mentalModels).map(x=>`<article class="model" style="--accent:${esc(x.color)}"><i class="model-icon">${x.id==="build"?"✦":"●"}</i><div><h3>${esc(x.title)}</h3><p>${esc(x.copy)}</p></div></article>`).join(""));
     html("[data-featured-apps]",visible(apps).filter(x=>x.featured).slice(0,3).map(storyCard).join(""));
@@ -150,6 +153,43 @@
       const observer=new IntersectionObserver(entries=>entries.forEach(entry=>entry.isIntersecting&&activate(entry.target.id)),{rootMargin:"-22% 0px -68%",threshold:0});
       sections.forEach(section=>observer.observe(section));
     }
+  }
+  function indiaDate(timezone="Asia/Kolkata") {
+    const parts=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:timezone,year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).filter(x=>x.type!=="literal").map(x=>[x.type,Number(x.value)]));
+    const day=Math.floor((Date.UTC(parts.year,parts.month-1,parts.day)-Date.UTC(parts.year,0,1))/86400000)+1;
+    return {year:parts.year,day};
+  }
+  function selectDailyItem(items,timezone="Asia/Kolkata") {
+    if(!items?.length)return null;
+    const date=indiaDate(timezone), shuffled=[...items];
+    let seed=(date.year*2654435761)>>>0;
+    const random=()=>{seed=(seed+0x6D2B79F5)>>>0;let t=seed;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return((t^(t>>>14))>>>0)/4294967296};
+    for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]}
+    return shuffled[(date.day-1)%shuffled.length];
+  }
+  function selectSiteQuote(site,quotes) {
+    const settings=site.verseRotation||{},items=visible(quotes);
+    if(settings.mode==="fixed")return items.find(item=>item.id===settings.fixedQuoteId)||site.shloka||items[0]||{};
+    return selectDailyItem(items,settings.timezone||"Asia/Kolkata")||site.shloka||{};
+  }
+  function renderWatermarks(config) {
+    if(!config?.enabled)return;
+    const main=document.querySelector("main");if(!main)return;
+    const candidates=visible(config.items).filter(item=>(item.pages||[]).includes(page)||item.pages?.includes("all"));
+    if(!candidates.length)return;
+    const mobile=matchMedia("(max-width: 760px)").matches;
+    const allowed=candidates.filter(item=>!mobile||item.showOnMobile!==false);
+    const limit=Math.max(0,Number(mobile?config.mobileMaxPerPage:config.maxPerPage)||0);
+    const selected=config.dailyRotation===false?allowed.slice(0,limit):dailySequence(allowed,config.timezone||"Asia/Kolkata").slice(0,limit);
+    if(!selected.length)return;
+    const layer=document.createElement("div");layer.className="page-watermarks";layer.setAttribute("aria-hidden","true");
+    layer.innerHTML=selected.map(item=>`<img class="page-watermark slot-${esc(item.placement||"bottom-right")} size-${esc(item.size||"medium")}" src="${asset(item.image)}" alt="" style="--watermark-opacity:${Math.min(.3,Math.max(0,Number(item.opacity)||.08))};--watermark-rotation:${Number(item.rotation)||0}deg">`).join("");
+    main.prepend(layer);
+  }
+  function dailySequence(items,timezone) {
+    if(!items.length)return [];
+    const first=selectDailyItem(items,timezone),start=items.indexOf(first);
+    return items.map((_,i)=>items[(start+i)%items.length]);
   }
   function setupReveals(motion) {const nodes=document.querySelectorAll(".reveal");if(!motion?.enabled||!motion?.sectionReveal||matchMedia("(prefers-reduced-motion: reduce)").matches){nodes.forEach(n=>n.classList.add("visible"));return}const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.08});nodes.forEach(n=>io.observe(n));}
   function text(s,v){const n=document.querySelector(s);if(n)n.textContent=v||""} function html(s,v){const n=document.querySelector(s);if(n)n.innerHTML=v||""} function attr(s,k,v){document.querySelector(s)?.setAttribute(k,v||"")}
