@@ -41,7 +41,7 @@ body {
 }
 body > main { width: 100%; flex: 1 0 auto; padding-bottom: 88px; }
 body > main { position: relative; }
-body > main > :not(.page-watermarks) { position: relative; z-index: 1; }
+body > main > :not(.page-watermarks):not(.about-index) { position: relative; z-index: 1; }
 .page-watermarks { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
 .page-watermark { position: absolute; width: clamp(150px, 18vw, 360px); max-height: 34rem; object-fit: contain; opacity: var(--watermark-opacity, .08); transform: rotate(var(--watermark-rotation, 0deg)); user-select: none; }
 .page-watermark.size-small { width: clamp(110px, 12vw, 240px); }
