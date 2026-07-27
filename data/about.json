@@ -233,71 +233,211 @@
       "title": "Shape the Idea",
       "copy": "Interface design, visual exploration, product flows, image-making, and spatial concepts.",
       "tools": [
-        { "name": "Figma", "mark": "Fi", "icon": "https://cdn.simpleicons.org/figma/103d4b" },
-        { "name": "Illustrator", "mark": "Ai", "icon": "" },
-        { "name": "Photoshop", "mark": "Ps", "icon": "" },
-        { "name": "SketchUp 3D", "mark": "Su", "icon": "https://cdn.simpleicons.org/sketchup/103d4b" },
-        { "name": "Claude Design", "mark": "Cl", "icon": "https://cdn.simpleicons.org/anthropic/103d4b" }
+        {
+          "name": "Figma",
+          "mark": "Fi",
+          "icon": "https://cdn.simpleicons.org/figma/103d4b"
+        },
+        {
+          "name": "Illustrator",
+          "mark": "Ai",
+          "icon": ""
+        },
+        {
+          "name": "Photoshop",
+          "mark": "Ps",
+          "icon": ""
+        },
+        {
+          "name": "SketchUp 3D",
+          "mark": "Su",
+          "icon": "https://cdn.simpleicons.org/sketchup/103d4b"
+        },
+        {
+          "name": "Claude Design",
+          "mark": "Cl",
+          "icon": "https://cdn.simpleicons.org/anthropic/103d4b"
+        }
       ]
     },
     {
       "title": "Organise the Work",
       "copy": "Product planning, requirements, collaborative thinking, issue tracking, and release workflows.",
       "tools": [
-        { "name": "Notion", "mark": "No", "icon": "https://cdn.simpleicons.org/notion/103d4b" },
-        { "name": "Aha!", "mark": "Ah", "icon": "" },
-        { "name": "Jira", "mark": "Ji", "icon": "https://cdn.simpleicons.org/jira/103d4b" },
-        { "name": "Bugzilla", "mark": "Bz", "icon": "" }
+        {
+          "name": "Notion",
+          "mark": "No",
+          "icon": "https://cdn.simpleicons.org/notion/103d4b"
+        },
+        {
+          "name": "Aha!",
+          "mark": "Ah",
+          "icon": ""
+        },
+        {
+          "name": "Jira",
+          "mark": "Ji",
+          "icon": "https://cdn.simpleicons.org/jira/103d4b"
+        },
+        {
+          "name": "Bugzilla",
+          "mark": "Bz",
+          "icon": ""
+        }
       ]
     },
     {
       "title": "Build and Publish",
       "copy": "Working prototypes, content structures, version control, and deployment. I work directly with HTML and CSS, and can read, review, and adapt JavaScript with AI assistance.",
       "tools": [
-        { "name": "HTML", "mark": "H5", "icon": "https://cdn.simpleicons.org/html5/103d4b" },
-        { "name": "CSS", "mark": "C3", "icon": "https://cdn.simpleicons.org/css/103d4b" },
-        { "name": "JavaScript", "mark": "JS", "icon": "https://cdn.simpleicons.org/javascript/103d4b" },
-        { "name": "JSON", "mark": "{ }", "icon": "https://cdn.simpleicons.org/json/103d4b" },
-        { "name": "Git", "mark": "Gi", "icon": "https://cdn.simpleicons.org/git/103d4b" },
-        { "name": "GitHub", "mark": "GH", "icon": "https://cdn.simpleicons.org/github/103d4b" },
-        { "name": "Vercel", "mark": "▲", "icon": "https://cdn.simpleicons.org/vercel/103d4b" }
+        {
+          "name": "HTML",
+          "mark": "H5",
+          "icon": "https://cdn.simpleicons.org/html5/103d4b"
+        },
+        {
+          "name": "CSS",
+          "mark": "C3",
+          "icon": "https://cdn.simpleicons.org/css/103d4b"
+        },
+        {
+          "name": "JavaScript",
+          "mark": "JS",
+          "icon": "https://cdn.simpleicons.org/javascript/103d4b"
+        },
+        {
+          "name": "JSON",
+          "mark": "{ }",
+          "icon": "https://cdn.simpleicons.org/json/103d4b"
+        },
+        {
+          "name": "Git",
+          "mark": "Gi",
+          "icon": "https://cdn.simpleicons.org/git/103d4b"
+        },
+        {
+          "name": "GitHub",
+          "mark": "GH",
+          "icon": "https://cdn.simpleicons.org/github/103d4b"
+        },
+        {
+          "name": "Vercel",
+          "mark": "▲",
+          "icon": "https://cdn.simpleicons.org/vercel/103d4b"
+        }
       ]
     },
     {
       "title": "Structure the Information",
       "copy": "Technical authoring, structured content, publishing systems, documentation sites, and content administration.",
       "tools": [
-        { "name": "FrameMaker", "mark": "Fm", "icon": "" },
-        { "name": "Paligo", "mark": "Pa", "icon": "" },
-        { "name": "MadCap Flare", "mark": "Mf", "icon": "" },
-        { "name": "WordPress", "mark": "Wp", "icon": "https://cdn.simpleicons.org/wordpress/103d4b" },
-        { "name": "Oxygen XML Editor", "mark": "Ox", "icon": "" },
-        { "name": "XMetaL", "mark": "Xm", "icon": "" },
-        { "name": "DITA", "mark": "Di", "icon": "" },
-        { "name": "XML", "mark": "Xm", "icon": "https://cdn.simpleicons.org/xml/103d4b" },
-        { "name": "Markdown", "mark": "Md", "icon": "https://cdn.simpleicons.org/markdown/103d4b" }
+        {
+          "name": "FrameMaker",
+          "mark": "Fm",
+          "icon": ""
+        },
+        {
+          "name": "Paligo",
+          "mark": "Pa",
+          "icon": ""
+        },
+        {
+          "name": "MadCap Flare",
+          "mark": "Mf",
+          "icon": ""
+        },
+        {
+          "name": "WordPress",
+          "mark": "Wp",
+          "icon": "https://cdn.simpleicons.org/wordpress/103d4b"
+        },
+        {
+          "name": "Oxygen XML Editor",
+          "mark": "Ox",
+          "icon": ""
+        },
+        {
+          "name": "XMetaL",
+          "mark": "Xm",
+          "icon": ""
+        },
+        {
+          "name": "DITA",
+          "mark": "Di",
+          "icon": ""
+        },
+        {
+          "name": "XML",
+          "mark": "Xm",
+          "icon": "https://cdn.simpleicons.org/xml/103d4b"
+        },
+        {
+          "name": "Markdown",
+          "mark": "Md",
+          "icon": "https://cdn.simpleicons.org/markdown/103d4b"
+        }
       ]
     },
     {
       "title": "Think With AI",
       "copy": "Exploration, prototyping, local-model experiments, workflow automation, and the development of plugins, skills, and agents.",
       "tools": [
-        { "name": "Claude Code", "mark": "Cl", "icon": "https://cdn.simpleicons.org/anthropic/103d4b" },
-        { "name": "Gemini", "mark": "Ge", "icon": "https://cdn.simpleicons.org/googlegemini/103d4b" },
-        { "name": "ChatGPT", "mark": "GP", "icon": "" },
-        { "name": "Codex", "mark": "Cx", "icon": "" },
-        { "name": "Ollama", "mark": "Ol", "icon": "https://cdn.simpleicons.org/ollama/103d4b" }
+        {
+          "name": "Claude Code",
+          "mark": "Cl",
+          "icon": "https://cdn.simpleicons.org/anthropic/103d4b"
+        },
+        {
+          "name": "Gemini",
+          "mark": "Ge",
+          "icon": "https://cdn.simpleicons.org/googlegemini/103d4b"
+        },
+        {
+          "name": "ChatGPT",
+          "mark": "GP",
+          "icon": ""
+        },
+        {
+          "name": "Codex",
+          "mark": "Cx",
+          "icon": ""
+        },
+        {
+          "name": "Ollama",
+          "mark": "Ol",
+          "icon": "https://cdn.simpleicons.org/ollama/103d4b"
+        }
       ]
     }
   ],
   "craftHeading": "Beyond the Screen",
   "craftIntro": "Physical making keeps a different part of the design process active: material, proportion, patience, and the feedback that comes from working with your hands.",
   "craft": [
-    { "name": "Woodworking", "mark": "⌁", "detail": "Hand and power tools" },
-    { "name": "Epoxy resin", "mark": "◌", "detail": "Casting, composition, and finishing" },
-    { "name": "Arduino prototyping", "mark": "⚡", "detail": "Small physical and interactive experiments" },
-    { "name": "Doodling", "mark": "✎", "detail": "Drawing without needing a brief" },
-    { "name": "Kerala mural painting", "mark": "❖", "detail": "Pattern, colour, and traditional visual forms" }
+    {
+      "name": "Woodworking",
+      "mark": "⌁",
+      "detail": "Hand and power tools"
+    },
+    {
+      "name": "Epoxy resin",
+      "mark": "◌",
+      "detail": "Casting, composition, and finishing"
+    },
+    {
+      "name": "Arduino prototyping",
+      "mark": "⚡",
+      "detail": "Small physical and interactive experiments"
+    },
+    {
+      "name": "Doodling",
+      "mark": "✎",
+      "detail": "Drawing without needing a brief"
+    },
+    {
+      "name": "Kerala mural painting",
+      "mark": "❖",
+      "detail": "Pattern, colour, and traditional visual forms"
+    }
   ],
   "pitchHeading": "My Happy Place",
   "pitch": "A space where product and solution design engage with complex domains—not as an inconvenience, but as the substance of the work. Where I can contribute from early framing through to a testable product direction.",

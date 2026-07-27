@@ -14,6 +14,10 @@
     "translation": "Yoga is skill in action.",
     "source": "Bhagavad Gita 2.50"
   },
+  "verseRotation": {
+    "mode": "daily",
+    "timezone": "Asia/Kolkata"
+  },
   "pageLinks": [
     {
       "id": "apps",
