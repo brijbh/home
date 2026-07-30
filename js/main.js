@@ -80,7 +80,7 @@
     const facts=(a.facts||[]).map(x=>`<div><strong>${esc(x.value)}</strong><span>${esc(x.label)}</span></div>`).join("");
     const capabilities=(a.capabilities||[]).sort((x,y)=>(x.order||0)-(y.order||0)).map((x,i)=>`<article class="about-capability"><span>0${i+1}</span><h3>${esc(x.title)}</h3><p>${esc(x.copy)}</p></article>`).join("");
     const domains=(a.domains||[]).map((x,i)=>`<article class="domain-card" style="--i:${i}"><span>${String(i+1).padStart(2,"0")}</span><h3>${esc(x.name)}</h3><p>${esc(x.detail)}</p></article>`).join("");
-    const companyMarks=(a.companyMarks||[]).map((x,i)=>`<figure class="career-mark career-mark-${i+1}" style="--i:${i}"><svg viewBox="${esc(x.viewBox)}" role="img" aria-label="${esc(x.name)}"><image href="assets/icons/corporate-icons.svg" width="303.99" height="471.79"></image></svg><figcaption>${esc(x.name)}</figcaption></figure>`).join("");
+    const companyMarks=(a.companyMarks||[]).map((x,i)=>{const box=String(x.viewBox||"").trim().split(/\s+/).map(Number),clip=`career-logo-${i}`;return `<figure class="career-mark" style="--i:${i}"><svg viewBox="${esc(x.viewBox)}" role="img" aria-label="${esc(x.name)}" preserveAspectRatio="xMidYMid meet"><defs><clipPath id="${clip}" clipPathUnits="userSpaceOnUse"><rect x="${box[0]}" y="${box[1]}" width="${box[2]}" height="${box[3]}"></rect></clipPath></defs><image href="assets/icons/corporate-icons.svg" width="303.99" height="471.79" clip-path="url(#${clip})"></image></svg><figcaption>${esc(x.name)}</figcaption></figure>`}).join("");
     const career=(a.career||[]).map(x=>`<li><time>${esc(x.period)}</time><div class="career-company"><h3>${esc(x.company)}</h3><p class="career-role">${esc(x.role)}</p></div><div class="career-detail"><p class="career-note">${esc(x.note)}</p><p class="career-work">${esc(x.work)}</p></div></li>`).join("");
     const process=(a.process||[]).map(x=>`<li><span>${esc(x.number)}</span><div><h3>${esc(x.title)}</h3><p>${esc(x.copy)}</p></div></li>`).join("");
     const independentProducts=(a.independentProducts||[]).map(x=>`<a class="bridge-product-link" href="${esc(externalUrl(x.url))}">${esc(x.name)}</a>`).join(", ");
@@ -115,7 +115,7 @@
         <div class="domain-grid">${domains}</div>
       </section>
       <section class="career-section reveal" id="career">
-        <div class="career-heading"><div><p class="eyebrow">Brijesh was here</p><h2>${esc(a.careerHeading)}</h2><p>${esc(a.careerIntro)}</p></div><img class="career-stamp" src="assets/images/bbwashere.svg" alt="" aria-hidden="true"></div>
+        <div class="career-heading"><div><p class="eyebrow">Brijesh was here</p><h2>${esc(a.careerHeading)}</h2><p>${esc(a.careerIntro)}</p></div></div>
         <div class="career-mark-field" aria-label="Companies from Brijesh's career">${companyMarks}</div>
         <div class="career-layout">
           <ol class="career-timeline">${career}</ol>

@@ -337,8 +337,9 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 .about-facts div:last-child { border-right: 0; }
 .about-facts strong { color: var(--accent); font: 500 36px/1 var(--display); }
 .about-facts span { max-width: 170px; color: var(--muted); font: 11px/1.4 var(--mono); }
-.about-section-head { display: grid; grid-template-columns: .72fr 1.28fr; gap: 40px; align-items: start; margin-bottom: 40px; }
+.about-section-head { display: block; margin-bottom: 40px; }
 .about-section-head h2, .career-heading h2, .about-bridge h2, .about-pitch h2 { max-width: 760px; margin: 0; font: 500 37px/1.08 var(--display); }
+.about-section-head h2 { margin-top: 14px; }
 .capability-grid { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid var(--line-strong); }
 .about-capability { min-height: 260px; padding: 26px; border-right: 1px solid var(--line); }
 .about-capability:last-child { border-right: 0; }
@@ -353,27 +354,20 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 .domain-card > span { color: var(--accent); font: 10px var(--mono); }
 .domain-card h3 { margin: 0; font: 700 18px/1.25 var(--serif); }
 .domain-card p { margin: 0; color: var(--muted); font-size: 12px; }
-.career-heading { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: end; margin-bottom: 42px; }
+.career-heading { margin-bottom: 30px; }
 .career-heading > div:first-child > p:last-child { max-width: 720px; margin: 18px 0 0; color: var(--muted); }
-.career-stamp { width: 154px; height: auto; color: var(--accent); transform: rotate(-4deg); opacity: .82; }
-.career-mark-field { position: relative; display: grid; grid-template-columns: repeat(12,1fr); grid-auto-rows: 98px; gap: 12px; padding: 26px; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 9px; background: linear-gradient(145deg,rgba(255,255,255,.38),rgba(232,224,210,.3)); }
-.career-mark-field::before { content: ""; position: absolute; inset: 50% -5% auto; border-top: 1px dashed rgba(190,75,43,.38); transform: rotate(-7deg); }
-.career-mark { position: relative; z-index: 1; display: grid; place-items: center; min-width: 0; margin: 0; padding: 14px; border: 1px solid rgba(16,61,75,.16); border-radius: 7px; background: rgba(255,250,241,.86); box-shadow: 0 8px 20px rgba(68,48,26,.08); transition: transform .25s ease, box-shadow .25s ease; }
-.career-mark:hover { z-index: 2; transform: translateY(-5px) rotate(0deg) !important; box-shadow: 0 16px 28px rgba(68,48,26,.16); }
-.career-mark svg { width: 100%; height: 62px; overflow: hidden; }
-.career-mark figcaption { position: absolute; right: 8px; bottom: 6px; color: var(--muted); font: 8px var(--mono); opacity: .7; }
-.career-mark-1 { grid-column: 1/4; transform: rotate(-2deg); }
-.career-mark-2 { grid-column: 5/8; transform: rotate(2deg); }
-.career-mark-3 { grid-column: 9/11; transform: rotate(-3deg); }
-.career-mark-4 { grid-column: 2/5; transform: rotate(1.5deg); }
-.career-mark-5 { grid-column: 6/9; transform: rotate(-1deg); }
-.career-mark-6 { grid-column: 10/13; transform: rotate(2.5deg); }
-.career-mark-7 { grid-column: 1/4; transform: rotate(2deg); }
-.career-mark-8 { grid-column: 5/8; transform: rotate(-2.5deg); }
-.career-mark-9 { grid-column: 9/12; transform: rotate(1deg); }
-.career-section:not(.visible) .career-mark { opacity: 0; transform: translateY(18px) rotate(-5deg); }
+.career-mark-field { position: relative; display: grid; grid-template-columns: repeat(9,minmax(0,1fr)); overflow: hidden; border-block: 1px solid var(--line-strong); background: rgba(255,255,255,.12); }
+.career-mark-field::after { content: ""; position: absolute; right: 0; bottom: 0; left: 0; border-bottom: 1px solid rgba(190,75,43,.28); transform: scaleX(0); transform-origin: left; transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.career-section.visible .career-mark-field::after { transform: scaleX(1); }
+.career-mark { position: relative; z-index: 1; display: grid; grid-template-rows: 34px auto; place-items: center; min-width: 0; margin: 0; padding: 14px 8px 10px; border-right: 1px solid var(--line); transition: background .22s ease,transform .22s ease,opacity .35s ease; }
+.career-mark:last-child { border-right: 0; }
+.career-mark:hover { background: rgba(255,255,255,.38); transform: translateY(-3px); }
+.career-mark svg { display: block; width: min(76px,82%); height: 30px; overflow: hidden; filter: grayscale(1); opacity: .62; transition: filter .22s ease,opacity .22s ease,transform .22s ease; }
+.career-mark:hover svg { filter: grayscale(0); opacity: 1; transform: scale(1.04); }
+.career-mark figcaption { overflow: hidden; width: 100%; margin-top: 6px; color: var(--muted); font: 7px var(--mono); text-align: center; text-overflow: ellipsis; white-space: nowrap; opacity: .72; }
+.career-section:not(.visible) .career-mark { opacity: 0; transform: translateY(7px); }
 .career-section.visible .career-mark { opacity: 1; transition-delay: calc(var(--i) * 55ms); }
-.career-layout { margin-top: 38px; }
+.career-layout { margin-top: 30px; }
 .career-timeline { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line); }
 .career-timeline li { display: grid; grid-template-columns: 92px 1fr; gap: 9px 18px; align-content: start; min-width: 0; padding: 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .2s ease; }
 .career-timeline li:hover { background: rgba(255,255,255,.24); }
@@ -548,12 +542,10 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   .domain-grid { grid-template-columns: 1fr; }
   .domain-card { grid-template-columns: 34px 1fr; gap: 12px; padding: 20px 12px; border-right: 0; }
   .domain-card p { grid-column: 2; }
-  .career-heading { grid-template-columns: 1fr; gap: 28px; align-items: start; }
-  .career-stamp { width: max-content; }
-  .career-mark-field { grid-template-columns: repeat(2,minmax(0,1fr)); grid-auto-rows: 104px; gap: 10px; padding: 16px; }
-  .career-mark { grid-column: auto; transform: rotate(0); }
-  .career-mark:last-child { grid-column: 1/-1; width: calc(50% - 5px); justify-self: center; }
-  .career-mark svg { height: 60px; }
+  .career-mark-field { grid-template-columns: repeat(3,minmax(0,1fr)); border-left: 1px solid var(--line); }
+  .career-mark { min-height: 66px; border-bottom: 1px solid var(--line); }
+  .career-mark:nth-child(3n) { border-right: 0; }
+  .career-mark:nth-last-child(-n+3) { border-bottom: 0; }
   .career-timeline { grid-template-columns: 1fr; }
   .career-timeline li { grid-template-columns: 82px 1fr; gap: 14px; }
   .career-timeline time { grid-column: 1; grid-row: 1/4; }
