@@ -8,6 +8,20 @@ repo: https://github.com/brijbh/home
 ## Summary
 "Git Home" is Brijesh Bhaskaran's personal product-design portfolio: a static HTML/CSS/vanilla-JS site (home, apps/case-studies, art gallery, about) driven by local JSON content files, with a local-only visual admin for editing that content.
 
+## Tech stack
+- Plain static HTML/CSS/vanilla JavaScript — no framework, no build step, no `package.json`
+- Content driven by local JSON files under `data/`
+- Local-only admin (`admin.html`) using the File System Access API to write JSON back into the project
+- Deployed via GitHub Pages and Vercel, both building straight from `main` (`.vercelignore` excludes admin/dev-only files)
+- `publish-site.ps1` (PowerShell) handles JSON validation and the publish push
+
+## Run locally
+```powershell
+# Serves the project root over Python's built-in HTTP server (default port 8080)
+.\start-githome.ps1
+```
+Requires Python on `PATH`. Then open `http://localhost:8080` in a browser. No install step — it's static files served as-is.
+
 ## Recent progress
 - Rebuilt the site with a shared visual system (header/wordmark, footer, mobile nav, warm background palette) across home, app-pages, art-pages, and about.
 - Built a local-only visual content admin (`admin.html`) with form-based editing of the JSON data, File System Access API writes back into the project folder, and JSON export/download as a fallback; stripped from the public repo and deploy via `.gitignore` / `.vercelignore`.
